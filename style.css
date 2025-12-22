@@ -22,6 +22,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    scroll-padding-top: 100px; /* FIX: Prevents header overlap on anchor links */
 }
 
 body {
@@ -31,6 +32,7 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     font-weight: 300;
+    padding-top: 100px; /* FIX: Main fix - pushes content below fixed header */
 }
 
 /* Custom Scrollbar */
@@ -142,7 +144,7 @@ section {
     color: var(--white);
 }
 
-/* ===== PREMIUM HEADER ===== */
+/* ===== PREMIUM HEADER - FIXED ===== */
 header {
     position: fixed;
     top: 0;
@@ -152,30 +154,37 @@ header {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
     z-index: 1000;
     transition: var(--transition);
+    height: 100px; /* FIX: Fixed height for consistency */
+    display: flex;
+    align-items: center;
 }
 
 header.scrolled {
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+    height: 80px; /* FIX: Smaller height when scrolled */
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 0;
+    padding: 0; /* FIX: Remove vertical padding, handle with header height */
+    width: 100%;
+    height: 100%;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--charcoal);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: var(--transition);
 }
 
 .logo span {
@@ -184,14 +193,23 @@ header.scrolled {
 
 .logo-icon {
     color: var(--gold);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+
+header.scrolled .logo {
+    font-size: 1.6rem;
+}
+
+header.scrolled .logo-icon {
+    font-size: 1.4rem;
 }
 
 /* Desktop Navigation */
 .desktop-nav ul {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .desktop-nav ul li {
@@ -206,6 +224,13 @@ header.scrolled {
     transition: var(--transition);
     padding: 0.5rem 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.desktop-nav ul li a i {
+    font-size: 1rem;
 }
 
 .desktop-nav ul li a:hover {
@@ -238,17 +263,25 @@ header.scrolled {
     color: var(--charcoal);
     z-index: 1001;
     transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu-btn:hover {
     color: var(--gold);
+    background-color: var(--beige);
 }
 
-/* ===== PREMIUM HERO SECTION ===== */
+/* ===== PREMIUM HERO SECTION - FIXED ===== */
 .hero {
-    /* Full viewport minus header height */
-    min-height: calc(100vh - 80px); /* Adjust 80px to match your header height */
-    height: auto;
+    height: calc(100vh - 100px); /* FIX: Account for header height */
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,69 +289,36 @@ header.scrolled {
     color: var(--white);
     position: relative;
     overflow: hidden;
-    padding-top: 80px; /* push content below fixed header */
-    background: linear-gradient(
-                    rgba(0, 0, 0, 0.6), 
-                    rgba(0, 0, 0, 0.6)
-                ), 
-                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') 
-                no-repeat center center/cover;
-    transition: background 1s ease-in-out;
-}
-
-/* Smooth background zoom on load */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    background-size: cover;
-    background-position: center;
-    filter: blur(2px);
-    opacity: 0.3;
-    z-index: 1;
-    transform: scale(1.05);
-    animation: bgZoom 15s ease-in-out infinite alternate;
-}
-
-@keyframes bgZoom {
-    from { transform: scale(1.05); }
-    to { transform: scale(1.15); }
+    margin-top: -100px; /* FIX: Negative margin to offset body padding */
+    padding-top: 100px; /* FIX: Add padding to bring content down */
 }
 
 .hero-content {
     max-width: 900px;
     padding: 0 2rem;
     z-index: 2;
-    animation: fadeInUp 1.2s ease-out forwards;
-    opacity: 0;
+    animation: fadeInUp 1s ease-out;
 }
 
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Hero Title */
 .hero h1 {
-    font-size: clamp(2.8rem, 5vw, 4.5rem); /* fully responsive */
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     color: var(--white);
     line-height: 1.1;
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
-    animation: fadeInText 1.5s ease-out forwards;
-    opacity: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes fadeInText {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Typewriter Effect */
 .typewriter-container {
     min-height: 100px;
     margin-bottom: 2rem;
@@ -328,7 +328,7 @@ header.scrolled {
 }
 
 #typewriter {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3rem;
     font-weight: 700;
     color: var(--gold);
     border-right: 3px solid var(--gold);
@@ -340,47 +340,29 @@ header.scrolled {
     animation: blinkCursor 0.7s infinite;
 }
 
-/* Cursor blink */
 @keyframes blinkCursor {
     0%, 100% { border-color: var(--gold); }
     50% { border-color: transparent; }
 }
 
-/* Hero Paragraph */
 .hero p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: 1.3rem;
     margin-bottom: 3rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.95;
+    opacity: 0.9;
     font-weight: 300;
-    animation: fadeInText 2s ease-out forwards;
 }
 
-/* Hero Buttons */
 .hero-btns {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeInUp 2.5s ease-out forwards;
 }
 
-/* Smooth hover on hero buttons */
-.hero-btns .btn {
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.hero-btns .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(191, 160, 107, 0.35);
-}
-
-
-/* ===== PAGE HERO SECTIONS ===== */
+/* ===== PAGE HERO SECTIONS - FIXED ===== */
 .page-hero {
     height: 400px;
     display: flex;
@@ -389,7 +371,8 @@ header.scrolled {
     text-align: center;
     color: var(--white);
     position: relative;
-    margin-top: 80px;
+    margin-top: -100px; /* FIX: Negative margin to offset body padding */
+    padding-top: 100px; /* FIX: Add padding to bring content down */
 }
 
 .page-hero-content {
@@ -1081,42 +1064,94 @@ footer {
     }
     
     .hero h1 {
-        font-size: 3.5rem;
-    }
-    
-    #typewriter {
-        font-size: 2.5rem;
-    }
-    
-    .page-hero h1 {
         font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Mobile Navigation */
-    .desktop-nav {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .hero {
-        min-height: 700px;
-    }
-    
-    .hero h1 {
-        font-size: 2.8rem;
     }
     
     #typewriter {
         font-size: 2.2rem;
     }
     
+    .page-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    body {
+        padding-top: 90px;
+    }
+    
+    header {
+        height: 90px;
+    }
+    
+    header.scrolled {
+        height: 70px;
+    }
+    
+    .hero {
+        height: calc(100vh - 90px);
+        margin-top: -90px;
+        padding-top: 90px;
+    }
+    
+    .page-hero {
+        margin-top: -90px;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Navigation */
+    .desktop-nav {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: var(--white);
+        padding: 2rem;
+        transition: var(--transition);
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .desktop-nav.active {
+        left: 0;
+    }
+    
+    .desktop-nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .desktop-nav ul li a {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+        justify-content: flex-start;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .hero {
+        min-height: 500px;
+        height: calc(100vh - 80px);
+        margin-top: -80px;
+        padding-top: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    #typewriter {
+        font-size: 1.8rem;
+    }
+    
     .typewriter-container {
-        min-height: 80px;
+        min-height: 70px;
     }
     
     .hero p {
@@ -1142,29 +1177,47 @@ footer {
     
     .page-hero {
         height: 350px;
-        margin-top: 70px;
+        margin-top: -80px;
+        padding-top: 80px;
     }
     
     .page-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .cta-content h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+    
+    body {
+        padding-top: 80px;
+    }
+    
+    header {
+        height: 80px;
+    }
+    
+    header.scrolled {
+        height: 70px;
+    }
+    
+    .desktop-nav {
+        top: 80px;
+        height: calc(100vh - 80px);
     }
 }
 
 @media (max-width: 576px) {
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     
     #typewriter {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .typewriter-container {
-        min-height: 70px;
+        min-height: 60px;
     }
     
     .hero-btns {
@@ -1195,7 +1248,7 @@ footer {
     }
     
     .contact-form {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     
     .footer-content {
@@ -1207,5 +1260,29 @@ footer {
     .footer-contact h4::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+    
+    body {
+        padding-top: 70px;
+    }
+    
+    header {
+        height: 70px;
+    }
+    
+    .hero {
+        height: calc(100vh - 70px);
+        margin-top: -70px;
+        padding-top: 70px;
+    }
+    
+    .page-hero {
+        margin-top: -70px;
+        padding-top: 70px;
+    }
+    
+    .desktop-nav {
+        top: 70px;
+        height: calc(100vh - 70px);
     }
 }
