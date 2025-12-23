@@ -362,97 +362,39 @@ nav ul li a:hover::after {
     display: block;
     opacity: 1;
 }
-/* About Section on Homepage */
-.about-home-content {
-    display: flex;
-    flex-wrap: wrap;      /* allow stacking on smaller screens */
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-home-image {
-    flex: 1 1 400px;      /* flexible width */
-    max-width: 500px;     /* cap the size */
-    text-align: center;
-}
-
-.about-home-image img {
-    width: 100%;          /* scale image to container */
-    height: auto;         /* maintain aspect ratio */
-    object-fit: cover;    /* crop nicely if needed */
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    display: block;
-}
-
-.about-home-text {
-    flex: 1 1 400px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .about-home-image {
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-home-content {
-        flex-direction: column;  /* stack text and image on mobile */
-        text-align: center;
-    }
-
-    .about-home-image {
-        max-width: 100%;         /* image fills container width on mobile */
-    }
-}
 
 
 /* ==========================
    Hero Section
 ========================== */
 .hero {
-    position: relative;
-    width: 100%;
     height: 100vh;
     min-height: 600px;
+    background: url('assets/homes.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    color: var(--white);
     text-align: center;
-    padding: 0 2rem;
-    color: #fff;
-    background: url('assets/homes.jpg') center/cover no-repeat;
+    padding-top: 80px;
 }
 
 .hero::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left:0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* dark overlay */
-    z-index: 1;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5));
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
-    width: 100%;
-    padding: 1rem;
-}
-
-/* Hero Heading */
-.hero-content h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    max-width: 800px;
+    padding: 0 2rem;
 }
 
 /* Typewriter Effect */
@@ -462,15 +404,16 @@ nav ul li a:hover::after {
 }
 
 .typewriter-text {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 600;
+    display: inline;
 }
 
 .typewriter-cursor {
     display: inline-block;
     width: 3px;
     height: 1.2em;
-    background: #FFD700; /* gold color */
+    background: var(--gold);
     margin-left: 5px;
     animation: blink 0.7s infinite;
     vertical-align: middle;
@@ -481,85 +424,21 @@ nav ul li a:hover::after {
     51%, 100% { opacity: 0; }
 }
 
-/* Hero Buttons */
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+/* ==========================
+   Common Sections
+========================== */
+section {
+    padding: 5rem 0;
+    position: relative;
 }
 
-.hero-buttons .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.bg-light {
+    background: var(--light);
 }
 
-.hero-buttons .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.btn {
-    background-color: #FFD700;
-    color: #000;
-}
-
-.btn.btn-outline {
-    background-color: transparent;
-    border: 2px solid #FFD700;
-    color: #FFD700;
-}
-
-.btn.btn-outline:hover {
-    background-color: #FFD700;
-    color: #000;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: clamp(1.8rem, 5vw, 3rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 60px;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(1.5rem, 6vw, 2.5rem);
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .typewriter-text {
-        font-size: clamp(1rem, 5vw, 1.8rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content {
-        padding: 0 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(1.2rem, 6vw, 2rem);
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-        padding: 0.7rem;
-    }
-}
+.bg-white {
+    background: var(--white);
+} why the image at the about section is very large in a website?
 
 /* ================= ABOUT SECTION ================= */
 .about-section {
