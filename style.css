@@ -362,6 +362,54 @@ nav ul li a:hover::after {
     display: block;
     opacity: 1;
 }
+/* About Section on Homepage */
+.about-home-content {
+    display: flex;
+    flex-wrap: wrap;      /* allow stacking on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-home-image {
+    flex: 1 1 400px;      /* flexible width */
+    max-width: 500px;     /* cap the size */
+    text-align: center;
+}
+
+.about-home-image img {
+    width: 100%;          /* scale image to container */
+    height: auto;         /* maintain aspect ratio */
+    object-fit: cover;    /* crop nicely if needed */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.about-home-text {
+    flex: 1 1 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .about-home-image {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-home-content {
+        flex-direction: column;  /* stack text and image on mobile */
+        text-align: center;
+    }
+
+    .about-home-image {
+        max-width: 100%;         /* image fills container width on mobile */
+    }
+}
+
 
 /* ==========================
    Hero Section
