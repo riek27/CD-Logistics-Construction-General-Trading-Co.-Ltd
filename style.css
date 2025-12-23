@@ -370,7 +370,7 @@ nav ul li a:hover::after {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: url('assets/homes.jpg') center/cover no-repeat;
+    background: url('assets/luxoo.jpg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
