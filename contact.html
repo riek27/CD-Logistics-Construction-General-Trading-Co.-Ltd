@@ -3,401 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact BEL Construction | Construction Company in Juba, South Sudan</title>
-    <meta name="description" content="Contact BEL Construction Company LTD in Juba, South Sudan for construction inquiries, quotes, and consultations.">
-    
-    <!-- Fonts -->
+    <title>Contact Us | BEL Company LTD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/construction.png">
 </head>
-<body class="contact-page">
-    <!-- ===== PREMIUM HEADER ===== -->
-    <header id="header">
-        <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">
-                    <i class="fas fa-hard-hat logo-icon"></i>
-                    BEL <span>Construction</span>
-                </a>
-                
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-building"></i> About</a></li>
-                        <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> Portfolio</a></li>
-                        <li><a href="contact.html" class="active"><i class="fas fa-phone-alt"></i> Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BEL<span>Company LTD</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown" id="servicesDropdown">
+                            <li><a href="services.html#residential">Residential</a></li>
+                            <li><a href="services.html#commercial">Commercial</a></li>
+                            <li><a href="services.html#renovation">Renovation</a></li>
+                            <li><a href="services.html#planning">Planning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-building"></i> About</a></li>
-                <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
-                <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> Portfolio</a></li>
-                <li><a href="contact.html" class="active"><i class="fas fa-phone-alt"></i> Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero">
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero contact-bg">
         <div class="page-hero-content">
-            <h1>Contact Our Team</h1>
-            <p>Get in touch with our construction experts in Juba for your project inquiries and consultations.</p>
+            <h1>Contact BEL Company LTD</h1>
+            <p>Reach out to discuss your construction and trading needs with our expert team.</p>
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
-            <div class="contact-container">
-                <div class="contact-info fade-in">
-                    <h3>Get In Touch</h3>
-                    
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="contact-detail-text">
-                                <h4>Our Location</h4>
-                                <p>Juba, South Sudan<br>
-                                <small>Main Office: Construction District, Juba</small></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-phone-alt"></i>
-                            <div class="contact-detail-text">
-                                <h4>Phone Numbers</h4>
-                                <p>+211 123 456 789<br>
-                                +211 987 654 321</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-detail-text">
-                                <h4>Email Addresses</h4>
-                                <p>info@belconstruction-ssd.com<br>
-                                quotes@belconstruction-ssd.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-clock"></i>
-                            <div class="contact-detail-text">
-                                <h4>Working Hours</h4>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
-                                Saturday: 9:00 AM - 2:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h4 style="margin-top: 2.5rem; margin-bottom: 1.5rem;">Connect With Us</h4>
-                    
-                    <div class="social-contact" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://wa.me/211123456789" class="whatsapp-btn" target="_blank" style="margin-top: 0;">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        
-                        <a href="tel:+211123456789" class="btn btn-outline" style="padding: 1rem 1.8rem;">
-                            <i class="fas fa-phone-alt"></i> Call Now
-                        </a>
-                    </div>
-                    
-                    <div style="margin-top: 3rem;">
-                        <h4>Why Choose BEL Construction?</h4>
-                        <ul style="margin-top: 1rem; color: #666;">
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="color: var(--gold); position: absolute; left: 0;"></i> <strong>Free Consultation:</strong> Initial project discussion at no cost
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="color: var(--gold); position: absolute; left: 0;"></i> <strong>Detailed Quotes:</strong> Transparent pricing with no hidden costs
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="color: var(--gold); position: absolute; left: 0;"></i> <strong>Local Expertise:</strong> Deep understanding of South Sudan's construction landscape
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="color: var(--gold); position: absolute; left: 0;"></i> <strong>Timely Response:</strong> We respond to inquiries within 24 hours
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="contact-form fade-in">
-                    <h3>Send Us a Message</h3>
-                    <p style="margin-bottom: 2rem; color: #666;">Fill out the form below and our construction experts will get back to you within 24 hours.</p>
-                    
+            <div class="contact-container fade-in">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.8rem;">Start Your Project</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" class="form-control" placeholder="Your Full Name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required placeholder="John Deng">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number" required>
-                        </div>
-                        
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="Your Email Address">
+                            <input type="email" id="email" class="form-control" required placeholder="john@example.com">
                         </div>
-                        
                         <div class="form-group">
-                            <label for="service">Service Interested In *</label>
-                            <select id="service" class="form-control" required>
-                                <option value="">Select a Service</option>
-                                <option value="commercial">Commercial Construction</option>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="+211 XXX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
                                 <option value="residential">Residential Construction</option>
-                                <option value="infrastructure">Infrastructure Development</option>
-                                <option value="renovation">Renovation & Remodeling</option>
-                                <option value="management">Construction Management</option>
-                                <option value="design">Design & Architecture</option>
-                                <option value="other">Other Inquiry</option>
+                                <option value="commercial">Commercial Construction</option>
+                                <option value="renovation">Renovation & Finishing</option>
+                                <option value="planning">Project Planning & Management</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="project-type">Project Type</label>
-                            <select id="project-type" class="form-control">
-                                <option value="">Select Project Type</option>
-                                <option value="new-construction">New Construction</option>
-                                <option value="renovation">Renovation/Remodeling</option>
-                                <option value="extension">Building Extension</option>
-                                <option value="repair">Repair/Maintenance</option>
-                                <option value="consultation">Consultation Only</option>
-                            </select>
+                            <label for="message">Project Details</label>
+                            <textarea id="message" class="form-control" required placeholder="Tell us about your construction project..."></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="budget">Estimated Budget (USD)</label>
-                            <select id="budget" class="form-control">
-                                <option value="">Select Budget Range</option>
-                                <option value="under-50k">Under $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-250k">$100,000 - $250,000</option>
-                                <option value="250k-500k">$250,000 - $500,000</option>
-                                <option value="500k-1m">$500,000 - $1,000,000</option>
-                                <option value="over-1m">Over $1,000,000</option>
-                                <option value="not-sure">Not Sure Yet</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" class="form-control" rows="6" placeholder="Please describe your construction project, including location, size, timeline, and any specific requirements..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn" style="width: 100%; padding: 1.2rem;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        
-                        <p style="text-align: center; margin-top: 1.5rem; color: #777; font-size: 0.9rem;">
-                            By submitting this form, you agree to our <a href="#" style="color: var(--gold);">Privacy Policy</a> and consent to be contacted by BEL Construction.
-                        </p>
+                        <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem; padding: 1.3rem;">Submit Request</button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MAP SECTION ===== -->
-    <section class="bg-light">
-        <div class="container">
-            <div class="map-container fade-in">
-                <div class="map-placeholder">
-                    <div class="map-placeholder-content">
-                        <h3>Our Location in Juba</h3>
-                        <p>BEL Construction Company LTD<br>
-                        Construction District, Juba, South Sudan</p>
-                        <a href="https://maps.google.com/?q=Juba,South+Sudan" class="btn btn-outline" target="_blank" style="margin-top: 1.5rem;">
-                            <i class="fas fa-map-marker-alt"></i> Open in Google Maps
-                        </a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Call Us Today</h3>
+                            <p style="font-size: 1.4rem; font-weight: 700; color: var(--gold);">+211 917 767 251</p>
+                            <p>Office Hours: Monday - Saturday, 8:00 AM - 6:00 PM</p>
+                            <p>Emergency: 24/7 available for urgent matters</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Visit Our Office</h3>
+                            <p style="font-weight: 600;">BEL Company LTD</p>
+                            <p>Juba, Central Business District</p>
+                            <p>South Sudan</p>
+                            <p style="margin-top: 1rem; color: var(--gold); font-weight: 600;">
+                                <i class="fas fa-clock" style="margin-right: 8px;"></i> Mon-Sat: 8AM-6PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>WhatsApp Business</h3>
+                            <p>Connect directly with our team for quick consultation and project quotes.</p>
+                            <a href="https://wa.me/211917767251" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h3>Our Location in Juba</h3>
+                            <p>Visit our headquarters in the heart of Juba's business district</p>
+                            <p style="margin-top: 1.5rem; font-size: 1.1rem;">
+                                <i class="fas fa-directions" style="margin-right: 8px;"></i> 
+                                <strong>Directions:</strong> Central Business District, Near Ministry of Roads
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FAQ SECTION ===== -->
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            
-            <div class="faq-container" style="max-width: 900px; margin: 0 auto;">
-                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <h4 style="margin-bottom: 0.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <span>How long does a typical construction project take in Juba?</span>
-                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
-                    </h4>
-                    <p style="color: #666; display: none;">Project timelines vary based on size and complexity. A residential house typically takes 6-12 months, while commercial projects can take 12-24 months. We provide detailed timelines during the planning phase and strive to complete projects on schedule despite local challenges.</p>
-                </div>
-                
-                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <h4 style="margin-bottom: 0.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <span>What construction materials do you use?</span>
-                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
-                    </h4>
-                    <p style="color: #666; display: none;">We use high-quality, durable materials suitable for South Sudan's climate. We source locally where possible and import specialized materials when needed. All materials meet international standards and undergo quality checks before use.</p>
-                </div>
-                
-                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <h4 style="margin-bottom: 0.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <span>Do you offer financing options for construction projects?</span>
-                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
-                    </h4>
-                    <p style="color: #666; display: none;">While we don't provide direct financing, we work with several financial institutions in Juba that offer construction loans. We can connect you with our trusted banking partners and help prepare the necessary documentation for loan applications.</p>
-                </div>
-                
-                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <h4 style="margin-bottom: 0.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <span>How do you handle project delays due to weather or other factors?</span>
-                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
-                    </h4>
-                    <p style="color: #666; display: none;">We build contingency plans into all our project schedules. Our experienced team knows how to work around South Sudan's rainy season and other local challenges. We maintain open communication with clients about any delays and work efficiently to minimize their impact.</p>
-                </div>
-                
-                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <h4 style="margin-bottom: 0.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <span>What areas in South Sudan do you serve?</span>
-                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
-                    </h4>
-                    <p style="color: #666; display: none;">While our main office is in Juba, we undertake construction projects throughout South Sudan. We have successfully completed projects in various states and are equipped to manage remote projects with proper planning and local partnerships.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <h2>Start Your Construction Journey Today</h2>
-                <p>Contact our team for a free, no-obligation consultation about your construction project in Juba.</p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                    <a href="tel:+211123456789" class="btn">
-                        <i class="fas fa-phone-alt"></i> Call Now
-                    </a>
-                    <a href="https://wa.me/211123456789" class="btn btn-outline" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <a href="index.html" class="footer-logo">BEL <span>Construction</span></a>
-                    <p>Leading construction company in Juba, South Sudan. We specialize in commercial, residential, and infrastructure projects with unmatched quality and reliability.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <div class="footer-logo">BEL<span>Company LTD</span></div>
+                    <p>Providing high-quality construction and trading services across South Sudan with professionalism and reliability.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h3 class="footer-heading">Quick Links</h3>
                     <ul>
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Our Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</p>
-                    <p><i class="fas fa-phone-alt"></i> +211 123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> info@belconstruction-ssd.com</p>
-                    <p><i class="fab fa-whatsapp"></i> +211 987 654 321</p>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#residential"><i class="fas fa-chevron-right"></i> Residential Construction</a></li>
+                        <li><a href="services.html#commercial"><i class="fas fa-chevron-right"></i> Commercial Construction</a></li>
+                        <li><a href="services.html#renovation"><i class="fas fa-chevron-right"></i> Renovation & Finishing</a></li>
+                        <li><a href="services.html#planning"><i class="fas fa-chevron-right"></i> Project Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:+211917767251"><i class="fas fa-phone"></i> +211 917 767 251</a></li>
+                        <li><a href="mailto:battousaienterprise@gmail.com"><i class="fas fa-envelope"></i> battousaienterprise@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</a></li>
+                        <li><a href="https://wa.me/211917767251" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 BEL Construction Company LTD. All Rights Reserved. | Premium Construction Services in Juba, South Sudan</p>
+            <div class="copyright">
+                <p>© 2025 BEL Company LTD. All rights reserved. | Juba, South Sudan</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
     <script src="script.js"></script>
-    
-    <!-- FAQ Toggle Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ toggle functionality
-            const faqItems = document.querySelectorAll('.faq-item h4');
-            
-            faqItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const answer = this.nextElementSibling;
-                    const icon = this.querySelector('i');
-                    
-                    // Toggle answer visibility
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                        icon.classList.remove('fa-chevron-up');
-                        icon.classList.add('fa-chevron-down');
-                    } else {
-                        answer.style.display = 'block';
-                        icon.classList.remove('fa-chevron-down');
-                        icon.classList.add('fa-chevron-up');
-                    }
-                });
-            });
-            
-            // Pre-fill service field if coming from services page
-            const urlParams = new URLSearchParams(window.location.search);
-            const serviceParam = urlParams.get('service');
-            
-            if (serviceParam) {
-                const serviceSelect = document.getElementById('service');
-                if (serviceSelect) {
-                    // Map URL parameter to option value
-                    const serviceMap = {
-                        'commercial': 'commercial',
-                        'residential': 'residential',
-                        'infrastructure': 'infrastructure',
-                        'renovation': 'renovation',
-                        'management': 'management',
-                        'design': 'design'
-                    };
-                    
-                    const serviceValue = serviceMap[serviceParam] || serviceParam;
-                    serviceSelect.value = serviceValue;
-                }
-            }
-        });
-    </script>
 </body>
 </html>
