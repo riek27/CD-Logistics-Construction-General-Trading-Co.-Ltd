@@ -3,271 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEL Construction | Premium Building & Construction | Juba, South Sudan</title>
-    <meta name="description" content="BEL Construction Company LTD - Leading construction and building services in Juba, South Sudan. Quality, reliability, and excellence in every project.">
-    
-    <!-- Fonts -->
+    <title>BEL Company LTD | Construction & Trading South Sudan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/construction.png">
 </head>
 <body>
-    <!-- ===== PREMIUM HEADER ===== -->
-    <header id="header">
-        <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">
-                    <i class="fas fa-hard-hat logo-icon"></i>
-                    BEL <span>Construction</span>
-                </a>
-                
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-building"></i> About</a></li>
-                        <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> Portfolio</a></li>
-                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BEL<span>Company LTD</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown" id="servicesDropdown">
+                            <li><a href="services.html#residential">Residential</a></li>
+                            <li><a href="services.html#commercial">Commercial</a></li>
+                            <li><a href="services.html#renovation">Renovation</a></li>
+                            <li><a href="services.html#planning">Planning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-building"></i> About</a></li>
-                <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
-                <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> Portfolio</a></li>
-                <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- ===== LUXURY HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <!-- Particle Background -->
-        <div class="particles"></div>
-        
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>BEL Construction Company LTD</h1>
-            
+            <h1 style="color: white;">Building Dreams Across South Sudan</h1>
             <div class="typewriter-container">
-                <div id="typewriter">Building Excellence in South Sudan</div>
+                <span class="typewriter-text" id="typewriterText"></span>
+                <span class="typewriter-cursor" id="typewriterCursor"></span>
             </div>
-            
-            <p>We are South Sudan's premier construction company, delivering exceptional quality building projects with unmatched reliability, professionalism, and timely delivery in Juba and beyond.</p>
-            
-            <div class="hero-btns">
-                <a href="#contact" class="btn">Start Your Project</a>
-                <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn">Start Your Project</a>
+                <a href="projects.html" class="btn btn-outline">View Our Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about">
+    <!-- About Section -->
+    <section class="about-home-section">
         <div class="container">
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <h2>Building South Sudan's Future</h2>
-                    <p>Since our establishment in Juba, BEL Construction has been at the forefront of construction excellence in South Sudan. We specialize in commercial, residential, and infrastructure projects that transform communities.</p>
-                    <p>Our mission is to deliver superior construction services that exceed client expectations while adhering to the highest standards of safety, quality, and environmental responsibility.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Certified Excellence</h4>
-                                <p>Internationally certified construction standards and quality assurance processes.</p>
-                            </div>
+            <div class="about-home-content fade-in">
+                <div class="about-home-image">
+                    <img src="https://images.unsplash.com/photo-1581091215361-2a9a5f5f6c01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="BEL Construction Team">
+                </div>
+                <div class="about-home-text">
+                    <h2>Excellence in Construction & Trading</h2>
+                    <p>BEL Company LTD is a trusted construction and general trading company based in Juba, South Sudan. We deliver top-quality residential, commercial, and renovation projects tailored to client needs.</p>
+                    <p>Our team of experts ensures projects are executed with professionalism, safety, and durability, creating structures that stand the test of time.</p>
+                    <div class="about-home-stats">
+                        <div class="about-stat-item">
+                            <div class="about-stat-number">5+</div>
+                            <div class="about-stat-label">Years Experience</div>
                         </div>
-                        
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Expert Team</h4>
-                                <p>Skilled engineers, architects, and construction professionals with local expertise.</p>
-                            </div>
+                        <div class="about-stat-item">
+                            <div class="about-stat-number">50+</div>
+                            <div class="about-stat-label">Projects Completed</div>
                         </div>
-                        
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Safety First</h4>
-                                <p>Comprehensive safety protocols ensuring zero accidents on all our sites.</p>
-                            </div>
+                        <div class="about-stat-item">
+                            <div class="about-stat-number">30+</div>
+                            <div class="about-stat-label">Skilled Professionals</div>
                         </div>
                     </div>
-                    
-                    <a href="about.html" class="btn" style="margin-top: 2rem;">Learn More About Us</a>
-                </div>
-                
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="BEL Construction Project in Juba">
+                    <a href="about.html" class="btn btn-about">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SERVICES PREVIEW ===== -->
-    <section id="services" class="bg-light">
+    <!-- Services Preview Section -->
+    <section class="services-preview-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Construction Services</h2>
-            </div>
+            <h2 class="section-title fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Providing professional construction solutions across South Sudan</p>
             
-            <p class="section-subtitle">We offer comprehensive construction solutions tailored to the unique needs of South Sudan's evolving landscape.</p>
-            
-            <div class="services-preview">
-                <div class="service-preview-card fade-in">
-                    <div class="service-preview-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="service-preview-content">
-                        <h3>Commercial Construction</h3>
-                        <p>From office complexes to retail spaces, we deliver commercial buildings that combine functionality with architectural excellence.</p>
-                        <a href="services.html#commercial" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                
+            <div class="services-preview-grid">
                 <div class="service-preview-card fade-in">
                     <div class="service-preview-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <div class="service-preview-content">
-                        <h3>Residential Construction</h3>
-                        <p>Luxury homes, apartments, and housing developments designed for comfort, durability, and modern living standards.</p>
-                        <a href="services.html#residential" class="btn btn-outline">Learn More</a>
+                    <h3>Residential Construction</h3>
+                    <p>Custom homes and villas built with precision and premium materials.</p>
+                    <ul class="service-preview-list">
+                        <li><i class="fas fa-check"></i> Custom Home Building</li>
+                        <li><i class="fas fa-check"></i> Luxury Villas</li>
+                        <li><i class="fas fa-check"></i> Home Extensions</li>
+                        <li><i class="fas fa-check"></i> Interior Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-preview-card fade-in">
+                    <div class="service-preview-icon">
+                        <i class="fas fa-building"></i>
                     </div>
+                    <h3>Commercial Construction</h3>
+                    <p>Office complexes, retail spaces, and industrial facilities tailored to your business.</p>
+                    <ul class="service-preview-list">
+                        <li><i class="fas fa-check"></i> Office Buildings</li>
+                        <li><i class="fas fa-check"></i> Retail Centers</li>
+                        <li><i class="fas fa-check"></i> Industrial Facilities</li>
+                        <li><i class="fas fa-check"></i> Hospitality Projects</li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="services-all-btn">
-                <a href="services.html" class="btn">See All Our Services</a>
+            <div class="text-center fade-in">
+                <a href="services.html" class="btn btn-services">See All Services</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== PORTFOLIO PREVIEW ===== -->
-    <section id="portfolio">
+    <!-- Projects Preview Section -->
+    <section class="projects-preview-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Recent Projects</h2>
-            </div>
+            <h2 class="section-title fade-in">Recent Projects</h2>
+            <p class="section-subtitle fade-in">Some of our completed projects in Juba</p>
             
-            <p class="section-subtitle">Take a look at some of our completed construction projects that showcase our expertise and commitment to quality.</p>
-            
-            <div class="portfolio-preview">
-                <div class="portfolio-preview-item fade-in">
-                    <div class="portfolio-preview-image">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Juba Commercial Complex">
-                    </div>
-                    <div class="portfolio-preview-content">
-                        <h3>Juba Commercial Complex</h3>
-                        <p>A modern 12-story commercial building in central Juba featuring office spaces, retail areas, and underground parking.</p>
-                        <div class="portfolio-preview-meta">
-                            <span>Juba City Center</span>
-                            <span>2024</span>
+            <div class="projects-preview-grid">
+                <div class="project-preview-card fade-in">
+                    <div class="project-preview-image">
+                        <img src="https://images.unsplash.com/photo-1565182999561-7dcd32a8eeca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Residential House Project">
+                        <div class="project-preview-overlay">
+                            <a href="projects.html" class="project-preview-link">View Details</a>
                         </div>
+                    </div>
+                    <div class="project-preview-info">
+                        <h3>Residential House Juba</h3>
+                        <div class="project-preview-location">
+                            <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
+                        </div>
+                        <p>Modern residential house built with durable materials and exceptional finishes.</p>
                     </div>
                 </div>
                 
-                <div class="portfolio-preview-item fade-in">
-                    <div class="portfolio-preview-image">
-                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80" alt="Luxury Residential Estate">
-                    </div>
-                    <div class="portfolio-preview-content">
-                        <h3>Luxury Residential Estate</h3>
-                        <p>20-unit luxury apartment complex with modern amenities, security, and sustainable design elements.</p>
-                        <div class="portfolio-preview-meta">
-                            <span>Juba South</span>
-                            <span>2023</span>
+                <div class="project-preview-card fade-in">
+                    <div class="project-preview-image">
+                        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Commercial Office Project">
+                        <div class="project-preview-overlay">
+                            <a href="projects.html" class="project-preview-link">View Details</a>
                         </div>
+                    </div>
+                    <div class="project-preview-info">
+                        <h3>Commercial Office Juba</h3>
+                        <div class="project-preview-location">
+                            <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
+                        </div>
+                        <p>High-end office building designed for modern businesses and corporate use.</p>
                     </div>
                 </div>
             </div>
             
-            <div class="portfolio-all-btn">
-                <a href="portfolio.html" class="btn">See Our Complete Work</a>
+            <div class="text-center fade-in">
+                <a href="projects.html" class="btn btn-projects">See All Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA SECTION ===== -->
+    <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content fade-in">
-                <h2>Ready to Build Your Vision?</h2>
-                <p>Contact BEL Construction today for a free consultation and let's discuss how we can bring your construction project to life with quality, precision, and excellence.</p>
-                <a href="contact.html" class="btn">Get Your Free Quote</a>
+                <h2>Ready to Build Your Dream?</h2>
+                <p>Contact BEL Company LTD today and let’s turn your vision into reality with quality, safety, and expertise.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-cta">Start Your Project</a>
+                    <a href="tel:+211917767251" class="btn btn-cta-outline">
+                        <i class="fas fa-phone"></i> Call Us: +211 917 767 251
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Choose BEL Company LTD</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>We use durable materials and skilled craftsmanship to ensure every project stands the test of time.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Our team ensures projects are completed within agreed timelines without compromising quality.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety First</h3>
+                    <p>Strict safety standards are followed on all our sites to protect our workers and clients.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our architects, engineers, and professionals bring expertise and innovation to each project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <a href="index.html" class="footer-logo">BEL <span>Construction</span></a>
-                    <p>Leading construction company in Juba, South Sudan. We specialize in commercial, residential, and infrastructure projects with unmatched quality and reliability.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <div class="footer-logo">BEL<span>Company LTD</span></div>
+                    <p>Leading construction and general trading company in South Sudan. We build more than structures—we build trust and communities.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h3 class="footer-heading">Quick Links</h3>
                     <ul>
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Our Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</p>
-                    <p><i class="fas fa-phone-alt"></i> +211 123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> info@belconstruction.com</p>
-                    <p><i class="fab fa-whatsapp"></i> +211 987 654 321</p>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#residential"><i class="fas fa-chevron-right"></i> Residential Construction</a></li>
+                        <li><a href="services.html#commercial"><i class="fas fa-chevron-right"></i> Commercial Construction</a></li>
+                        <li><a href="services.html#renovation"><i class="fas fa-chevron-right"></i> Renovation Works</a></li>
+                        <li><a href="services.html#planning"><i class="fas fa-chevron-right"></i> Project Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:+211917767251"><i class="fas fa-phone"></i> +211 917 767 251</a></li>
+                        <li><a href="mailto:battousaienterprise@gmail.com"><i class="fas fa-envelope"></i> battousaienterprise@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</a></li>
+                        <li><a href="https://wa.me/211917767251" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 BEL Construction Company LTD. All Rights Reserved. | Premium Construction Services in Juba, South Sudan</p>
+            <div class="copyright">
+                <p>© 2025 BEL Company LTD. All rights reserved. | Juba, South Sudan</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
     <script src="script.js"></script>
 </body>
 </html>
