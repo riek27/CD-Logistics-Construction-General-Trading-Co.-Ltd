@@ -440,42 +440,68 @@ section {
 }
 
 /* ================= ABOUT SECTION ================= */
-.about-home-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    max-width: 1200px;      /* constrain overall width */
-    margin: 4rem auto;      /* center content */
-    padding: 0 1rem;        /* small side padding for mobile */
+.about-section {
+    padding: 6rem 0;
+    background: #f9f9f9;
 }
 
-/* Image Container */
-.about-home-image {
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 500px) 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.about-content.reverse {
+    direction: rtl; /* swap columns */
+}
+
+.about-content.reverse .about-text {
+    direction: ltr;
+}
+
+/* Image */
+.about-image {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-hover);
-    max-width: 100%;
-    height: auto;
 }
 
-.about-home-image img {
+.about-image img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;       /* ensures image fills container without distortion */
-    max-height: 500px;       /* limit height to avoid huge images */
+    object-fit: cover;
+    max-height: 500px; /* limit height to avoid huge images */
+    border-radius: var(--border-radius);
 }
 
-/* Stats Section */
-.about-home-stats {
+/* Text */
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Stats */
+.about-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
-.about-stat-item {
+.stat-item {
     text-align: center;
     padding: 1.5rem;
     background: var(--white);
@@ -484,90 +510,74 @@ section {
     transition: transform 0.3s ease;
 }
 
-.about-stat-item:hover {
+.stat-item:hover {
     transform: translateY(-5px);
 }
 
-.about-stat-number {
+.stat-number {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary);
-    display: block;
 }
 
-.about-stat-label {
+.stat-label {
     font-size: 0.9rem;
-    color: var(--gray);
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--gray);
 }
 
-/* ================= RESPONSIVE STYLING ================= */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-    .about-home-content {
-        grid-template-columns: 1fr;
+    .about-content {
+        grid-template-columns: 1fr; /* stack columns */
         gap: 2rem;
     }
 
-    .about-home-image {
+    .about-image img {
         max-height: 400px;
     }
 }
 
 @media (max-width: 600px) {
-    .about-home-content {
-        margin: 2rem auto;
+    .about-content {
         gap: 1.5rem;
+        padding: 0 1rem;
     }
 
-    .about-home-image {
+    .about-image img {
         max-height: 300px;
     }
 
-    .about-stat-number {
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .stat-number {
         font-size: 2rem;
     }
 
-    .about-stat-label {
+    .stat-label {
         font-size: 0.8rem;
     }
 }
 
-.about-home-content {
-    display: grid;
-    grid-template-columns: minmax(300px, 500px) 1fr; /* image column max 500px, text takes remaining */
-    gap: 3rem;
-    align-items: center;
-    max-width: 1200px; /* container limit */
-    margin: 0 auto;
-    padding: 0 1rem;
+/* ================= FADE-IN ANIMATION ================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
 }
 
-.about-home-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-hover);
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .about-home-content {
-        grid-template-columns: 1fr; /* stack on smaller screens */
-    }
-
-    .about-home-image img {
-        max-height: 400px;
-    }
-}
-
-@media (max-width: 600px) {
-    .about-home-image img {
-        max-height: 300px;
-    }
-}
 
 
 /* Services Preview */
