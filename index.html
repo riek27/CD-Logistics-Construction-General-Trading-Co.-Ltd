@@ -1,223 +1,133 @@
+<!-- ========== index.html ========== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CD Logistics · Construction & General Trading</title>
-  <!-- Google Fonts & Font Awesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- global style -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityBuild | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR (sticky + dropdown) -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">CD <span class="gold">LOGISTICS</span></a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="services.html#construction">Construction Works</a></li>
-            <li><a href="services.html#architectural">Architectural Design</a></li>
-            <li><a href="services.html#logistics">Logistics</a></li>
-            <li><a href="services.html#renovation">Renovation</a></li>
-            <li><a href="services.html#interior">Interior Decoration</a></li>
-            <li><a href="services.html#maintenance">Maintenance</a></li>
-            <li><a href="services.html#property">Property Management</a></li>
-          </ul>
-        </li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <div class="logo">CityBuild<span>CONSTRUCTION & ENGINEERING</span></div>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-  <!-- HERO SECTION (full screen, background image with overlay) -->
-  <section id="hero-home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">Building South Sudan’s Future <br>with <span class="gold">Excellence</span></h1>
-      <div class="hero-subtitle">
-        <span id="typing-text"></span><span class="cursor">|</span>
-      </div>
-      <div class="hero-buttons">
-        <a href="services.html" class="btn btn-primary">Our Services</a>
-        <a href="contact.html" class="btn btn-outline">Contact Us</a>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section (full screen) -->
+    <section id="home" class="hero" style="min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: url('https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover; background-attachment: fixed; isolation: isolate;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,25,39,0.85) 0%, rgba(10,25,39,0.6) 100%); z-index: -1;"></div>
+        <div class="hero-content" style="max-width: 1000px; color: var(--cream); animation: fadeUp 1.2s ease;">
+            <h1 style="color: var(--cream); font-weight: 800; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Building the Future with Strength & Precision</h1>
+            <p style="font-size: 1.4rem; margin: 1.5rem 0 3rem; opacity: 0.95; font-weight: 300; letter-spacing: 0.5px; color: #f0eae2;">Professional Construction & Engineering Services in Juba, South Sudan</p>
+            <div class="hero-buttons" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="services.html" class="btn">Our Services</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="section reveal">
-    <div class="container about-preview">
-      <div class="about-text">
-        <h2 class="section-title">Who We Are</h2>
-        <p class="section-subtitle">South Sudan’s premier construction & logistics partner</p>
-        <p>With over a decade of experience in Juba and across the region, CD Logistics, Construction & General Trading Co. Ltd delivers turnkey solutions — from high‑rise structures to complex logistics. We combine international standards with local expertise to build landmarks that last.</p>
-        <a href="about.html" class="btn btn-secondary">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="construction team">
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED SERVICES (3 CARDS) -->
-  <section class="section bg-light reveal">
     <div class="container">
-      <h2 class="section-title centered">Our Core Expertise</h2>
-      <div class="card-grid">
-        <!-- Construction Works -->
-        <div class="service-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="construction">
-          </div>
-          <h3>Construction Works</h3>
-          <p>Residential & Commercial · Warehouses & Hospitals</p>
-          <ul class="feature-list">
-            <li>Structural works</li>
-            <li>Project management</li>
-            <li>Quality control</li>
-          </ul>
+        <!-- Intro paragraph -->
+        <div style="text-align: center; max-width: 950px; margin: 4rem auto 2rem; font-size: 1.25rem; color: #2c2c2c; font-weight: 300; line-height: 1.9;">
+            <p>CityBuild Construction and Engineering Co. Ltd stands as a beacon of excellence in Juba. We merge timeless craftsmanship with modern innovation, delivering structures that define luxury and durability.</p>
         </div>
-        <!-- Structural & Design -->
-        <div class="service-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="design">
-          </div>
-          <h3>Architectural & Engineering</h3>
-          <p>Functional Planning · Structural Engineering</p>
-          <ul class="feature-list">
-            <li>Modern aesthetic designs</li>
-            <li>3D visualisation</li>
-            <li>Permit assistance</li>
-          </ul>
-        </div>
-        <!-- Logistics -->
-        <div class="service-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="logistics">
-          </div>
-          <h3>Logistics Services</h3>
-          <p>Transportation · Material Supply</p>
-          <ul class="feature-list">
-            <li>Project coordination</li>
-            <li>Customs clearance</li>
-            <li>Fleet management</li>
-          </ul>
-        </div>
-      </div>
-      <div class="centered" style="margin-top: 3rem;">
-        <a href="services.html" class="btn btn-primary">See Our Services</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- WHY CHOOSE US (6 ICON GRID) -->
-  <section class="section reveal">
-    <div class="container">
-      <h2 class="section-title centered">Why Choose CD Logistics</h2>
-      <div class="icon-grid">
-        <div class="icon-item"><i class="fas fa-users"></i><span>Experienced & Dedicated Team</span></div>
-        <div class="icon-item"><i class="fas fa-medal"></i><span>Commitment to Quality</span></div>
-        <div class="icon-item"><i class="fas fa-truck"></i><span>Reliable Logistics Support</span></div>
-        <div class="icon-item"><i class="fas fa-clock"></i><span>On-time Project Completion</span></div>
-        <div class="icon-item"><i class="fas fa-handshake"></i><span>Client-focused Approach</span></div>
-        <div class="icon-item"><i class="fas fa-building"></i><span>Strong Professional Reputation</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS PREVIEW -->
-  <section class="section bg-light reveal">
-    <div class="container">
-      <h2 class="section-title centered">Recent Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="project">
-          <div class="project-overlay">
-            <h4>Juba Commercial Tower</h4>
-            <p>12-story reinforced concrete</p>
-            <a href="projects.html" class="btn-small">View Details</a>
-          </div>
+        <!-- 3 Feature boxes -->
+        <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-gem"></i><h3>Quality Workmanship</h3><p>Meticulous attention to detail and premium materials ensure every project is a masterpiece.</p></div>
+            <div class="feature-card"><i class="fas fa-crown"></i><h3>Experienced Team</h3><p>Our architects and engineers bring world‑class expertise to the heart of South Sudan.</p></div>
+            <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Reliable & Durable Structures</h3><p>Built to withstand time and elements – safety and longevity are our signatures.</p></div>
         </div>
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1545324418-cc1d3fa86c58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="project">
-          <div class="project-overlay">
-            <h4>Logistics Hub - Nimule</h4>
-            <p>Warehouse & cold storage</p>
-            <a href="projects.html" class="btn-small">View Details</a>
-          </div>
+
+        <!-- About summary with Learn More button -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin: 5rem 0;">
+            <div>
+                <h2>About CityBuild</h2>
+                <p style="font-size: 1.2rem; font-weight: 300; margin-bottom: 2rem;">With over a decade of experience, we have completed landmark projects across Juba. Our commitment to excellence and client satisfaction sets us apart.</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+            <div class="about-image"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop" alt="About CityBuild" style="width:100%; border-radius:40px;"></div>
         </div>
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="project">
-          <div class="project-overlay">
-            <h4>UN Housing Complex</h4>
-            <p>40 modern residences</p>
-            <a href="projects.html" class="btn-small">View Details</a>
-          </div>
+
+        <!-- Why Choose Us section -->
+        <div style="margin: 5rem 0;">
+            <h2 class="text-center">Why Choose Us</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-medal gold-text" style="font-size:3rem;"></i><h3>20+ Years</h3><p>Combined experience of our lead engineers.</p></div>
+                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-clock gold-text" style="font-size:3rem;"></i><h3>On Time</h3><p>Projects delivered within schedule.</p></div>
+                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-handshake gold-text" style="font-size:3rem;"></i><h3>100% Client Satisfaction</h3><p>Long-term partnerships with repeat clients.</p></div>
+            </div>
         </div>
-      </div>
-      <div class="centered" style="margin-top: 3rem;">
-        <a href="projects.html" class="btn btn-primary">See Our Projects</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- CALL TO ACTION (full width background) -->
-  <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
-      <h2>Ready to Start Your Project With Us?</h2>
-      <a href="tel:+211926295744" class="btn btn-primary">Call Us Now</a>
-    </div>
-  </section>
+        <!-- CTA: Let's Build Something Great Together -->
+        <div class="cta-common">
+            <h2>Let's Build Something Great Together</h2>
+            <a href="contact.html" class="btn">Get a Quote</a>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>CD Logistics <span class="gold">Construction</span></h4>
-        <p>Engineering South Sudan’s tomorrow — with integrity, safety and excellence.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <ul>
-          <li><a href="services.html#construction">Construction</a></li>
-          <li><a href="services.html#architectural">Design</a></li>
-          <li><a href="services.html#logistics">Logistics</a></li>
-          <li><a href="services.html#renovation">Renovation</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><i class="fas fa-phone-alt"></i> +211 926 295 744<br>+211 912 616 971</p>
-        <p><i class="fas fa-envelope"></i> info@cdconstruction.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Suk Libya next to Charter Bank, Juba, South Sudan</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 CD Logistics, Construction & General Trading Co. Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+        <!-- Gallery section with button -->
+        <div style="margin: 5rem 0;">
+            <h2 class="text-center">Recent Projects</h2>
+            <div class="gallery-grid" style="margin: 3rem 0;">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1590673846749-e2b9fde5a7b2?q=80&w=1974&auto=format&fit=crop" alt="Project 1"></div>
+                <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop" alt="Project 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="Project 3"></div>
+            </div>
+            <div class="text-center"><a href="gallery.html" class="btn">See Our All Gallery</a></div>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- Another CTA (optional) but we already have one, so we'll keep it simple -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">CityBuild<span>Construction & Engineering Co. Ltd</span></div>
+                <p style="margin-top:1.5rem; color:#b9b3a8;">Excellence since 2026</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color:var(--gold);">Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="color:var(--gold);">Contact</h4>
+                <p><i class="fas fa-phone"></i> +211 924 555 436</p>
+                <p><i class="fab fa-whatsapp"></i> +256 777 218 912</p>
+                <p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p>
+            </div>
+            <div>
+                <h4 style="color:var(--gold);">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 CityBuild Construction and Engineering Co. Ltd. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightbox-img" src="" alt=""></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
