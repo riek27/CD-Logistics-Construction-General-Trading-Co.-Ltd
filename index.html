@@ -1,288 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEL Company LTD | Construction & Trading South Sudan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CD Logistics | Construction & Trading</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header" id="header">
+    <div class="logo">CD<span> Logistics</span></div>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">BEL<span>Company LTD</span></a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li class="has-dropdown">
-                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
-                        <ul class="dropdown" id="servicesDropdown">
-                            <li><a href="services.html#residential">Residential</a></li>
-                            <li><a href="services.html#commercial">Commercial</a></li>
-                            <li><a href="services.html#renovation">Renovation</a></li>
-                            <li><a href="services.html#planning">Planning</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Building Excellence.<br>Delivering Trust.</h1>
+      <div class="typewriter">
+        <span id="typed-text"></span>
+      </div>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Start Your Project</a>
+        <a href="about.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="container">
+    <div class="two-col">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="About CD Logistics">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">Driven by Quality. Defined by Results.</h2>
+        <p>CD Logistics, Construction & General Trading Co. Ltd is South Sudan’s premier integrated construction and logistics partner. With a relentless focus on quality management and safety-first operations, we deliver iconic structures and complex supply chain solutions.</p>
+        <a href="about.html" class="btn-primary" style="background: var(--navy); color: white;">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview (4 cards) -->
+  <section class="bg-light">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Residential Construction">
+          <h3>Residential Construction</h3>
+          <p>Luxury homes & apartments built to last.</p>
         </div>
-    </header>
-
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 style="color: white;">Building Dreams Across South Sudan</h1>
-            <div class="typewriter-container">
-                <span class="typewriter-text" id="typewriterText"></span>
-                <span class="typewriter-cursor" id="typewriterCursor"></span>
-            </div>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn">Start Your Project</a>
-                <a href="projects.html" class="btn btn-outline">View Our Projects</a>
-            </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Commercial Construction">
+          <h3>Commercial Construction</h3>
+          <p>Offices, malls, and industrial buildings.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-home-section">
-        <div class="container">
-            <div class="about-home-content fade-in">
-                <div class="about-home-image">
-                    <img src="assets/modem.jpg" alt="BEL Construction Team">
-                </div>
-                <div class="about-home-text">
-                    <h2>Excellence in Construction & Trading</h2>
-                    <p>BEL Company LTD is a trusted construction and general trading company based in Juba, South Sudan. We deliver top-quality residential, commercial, and renovation projects tailored to client needs.</p>
-                    <p>Our team of experts ensures projects are executed with professionalism, safety, and durability, creating structures that stand the test of time.</p>
-                    <div class="about-home-stats">
-                        <div class="about-stat-item">
-                            <div class="about-stat-number">5+</div>
-                            <div class="about-stat-label">Years Experience</div>
-                        </div>
-                        <div class="about-stat-item">
-                            <div class="about-stat-number">50+</div>
-                            <div class="about-stat-label">Projects Completed</div>
-                        </div>
-                        <div class="about-stat-item">
-                            <div class="about-stat-number">30+</div>
-                            <div class="about-stat-label">Skilled Professionals</div>
-                        </div>
-                    </div>
-                    <a href="about.html" class="btn btn-about">Learn More About Us</a>
-                </div>
-            </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Logistics">
+          <h3>Logistics & Supply Chain</h3>
+          <p>Efficient procurement and freight.</p>
         </div>
-    </section>
-
-    <!-- Services Preview Section -->
-    <section class="services-preview-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Our Services</h2>
-            <p class="section-subtitle fade-in">Providing professional construction solutions across South Sudan</p>
-            
-            <div class="services-preview-grid">
-                <div class="service-preview-card fade-in">
-                    <div class="service-preview-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Residential Construction</h3>
-                    <p>Custom homes and villas built with precision and premium materials.</p>
-                    <ul class="service-preview-list">
-                        <li><i class="fas fa-check"></i> Custom Home Building</li>
-                        <li><i class="fas fa-check"></i> Luxury Villas</li>
-                        <li><i class="fas fa-check"></i> Home Extensions</li>
-                        <li><i class="fas fa-check"></i> Interior Design</li>
-                    </ul>
-                </div>
-                
-                <div class="service-preview-card fade-in">
-                    <div class="service-preview-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Commercial Construction</h3>
-                    <p>Office complexes, retail spaces, and industrial facilities tailored to your business.</p>
-                    <ul class="service-preview-list">
-                        <li><i class="fas fa-check"></i> Office Buildings</li>
-                        <li><i class="fas fa-check"></i> Retail Centers</li>
-                        <li><i class="fas fa-check"></i> Industrial Facilities</li>
-                        <li><i class="fas fa-check"></i> Hospitality Projects</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="text-center fade-in">
-                <a href="services.html" class="btn btn-services">See All Services</a>
-            </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Renovation">
+          <h3>Renovation & Remodeling</h3>
+          <p>Transform existing spaces.</p>
         </div>
-    </section>
+      </div>
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="services.html" class="btn-primary">See All Services</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Preview Section -->
-    <section class="projects-preview-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Recent Projects</h2>
-            <p class="section-subtitle fade-in">Some of our completed projects in Juba</p>
-            
-            <div class="projects-preview-grid">
-                <div class="project-preview-card fade-in">
-                    <div class="project-preview-image">
-                        <img src="assets/luxoo.jpg" alt="Residential House Project">
-                        <div class="project-preview-overlay">
-                            <a href="projects.html" class="project-preview-link">View Details</a>
-                        </div>
-                    </div>
-                    <div class="project-preview-info">
-                        <h3>Residential House Juba</h3>
-                        <div class="project-preview-location">
-                            <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
-                        </div>
-                        <p>Modern residential house built with durable materials and exceptional finishes.</p>
-                    </div>
-                </div>
-                
-                <div class="project-preview-card fade-in">
-                    <div class="project-preview-image">
-                        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Commercial Office Project">
-                        <div class="project-preview-overlay">
-                            <a href="projects.html" class="project-preview-link">View Details</a>
-                        </div>
-                    </div>
-                    <div class="project-preview-info">
-                        <h3>Commercial Office Juba</h3>
-                        <div class="project-preview-location">
-                            <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
-                        </div>
-                        <p>High-end office building designed for modern businesses and corporate use.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center fade-in">
-                <a href="projects.html" class="btn btn-projects">See All Projects</a>
-            </div>
+  <!-- Why Choose Us -->
+  <section class="bg-navy">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="bullets-grid">
+        <div class="bullet-item"><i class="fas fa-check-circle"></i> <span>Integrated Quality Management</span></div>
+        <div class="bullet-item"><i class="fas fa-clock"></i> <span>On-Time Project Delivery</span></div>
+        <div class="bullet-item"><i class="fas fa-shield-alt"></i> <span>Safety-First Operations</span></div>
+        <div class="bullet-item"><i class="fas fa-users"></i> <span>Professional Team</span></div>
+        <div class="bullet-item"><i class="fas fa-handshake"></i> <span>Trusted by Businesses</span></div>
+        <div class="bullet-item"><i class="fas fa-trophy"></i> <span>Excellence in Every Project</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Preview (3 projects) -->
+  <section class="container">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Project">
+        <div class="project-overlay">
+          <h4>Nile Tower</h4>
+          <p>Juba, Commercial</p>
+          <a href="projects.html" class="project-link">View Project →</a>
         </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <h2>Ready to Build Your Dream?</h2>
-                <p>Contact BEL Company LTD today and let’s turn your vision into reality with quality, safety, and expertise.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-cta">Start Your Project</a>
-                    <a href="tel:+211917767251" class="btn btn-cta-outline">
-                        <i class="fas fa-phone"></i> Call Us: +211 917 767 251
-                    </a>
-                </div>
-            </div>
+      </div>
+      <div class="project-item">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1d3fa86c58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Project">
+        <div class="project-overlay">
+          <h4>Royal Residence</h4>
+          <p>Juba, Residential</p>
+          <a href="projects.html" class="project-link">View Project →</a>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Why Choose BEL Company LTD</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>High Quality</h3>
-                    <p>We use durable materials and skilled craftsmanship to ensure every project stands the test of time.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>On-Time Delivery</h3>
-                    <p>Our team ensures projects are completed within agreed timelines without compromising quality.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Safety First</h3>
-                    <p>Strict safety standards are followed on all our sites to protect our workers and clients.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Expert Team</h3>
-                    <p>Our architects, engineers, and professionals bring expertise and innovation to each project.</p>
-                </div>
-            </div>
+      </div>
+      <div class="project-item">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Project">
+        <div class="project-overlay">
+          <h4>Logistics Hub</h4>
+          <p>Nimule, Logistics</p>
+          <a href="projects.html" class="project-link">View Project →</a>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top: 40px;">
+      <a href="projects.html" class="btn-primary">View All Projects</a>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">BEL<span>Company LTD</span></div>
-                    <p>Leading construction and general trading company in South Sudan. We build more than structures—we build trust and communities.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3 class="footer-heading">Services</h3>
-                    <ul>
-                        <li><a href="services.html#residential"><i class="fas fa-chevron-right"></i> Residential Construction</a></li>
-                        <li><a href="services.html#commercial"><i class="fas fa-chevron-right"></i> Commercial Construction</a></li>
-                        <li><a href="services.html#renovation"><i class="fas fa-chevron-right"></i> Renovation Works</a></li>
-                        <li><a href="services.html#planning"><i class="fas fa-chevron-right"></i> Project Planning</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3 class="footer-heading">Contact Info</h3>
-                    <ul>
-                        <li><a href="tel:+211917767251"><i class="fas fa-phone"></i> +211 917 767 251</a></li>
-                        <li><a href="mailto:battousaienterprise@gmail.com"><i class="fas fa-envelope"></i> battousaienterprise@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</a></li>
-                        <li><a href="https://wa.me/211917767251" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2025 BEL Company LTD. All rights reserved. | Juba, South Sudan</p>
-            </div>
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Let’s Build Something Exceptional Together.</h2>
+      <a href="contact.html" class="btn-primary" style="background: var(--gold); color: var(--navy);">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">CD<span> Logistics</span></div>
+          <p>Proudly South Sudanese – Quality & Professional. Multidisciplinary services for sustainable development.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-    </footer>
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+            <li><a href="#"><i class="fas fa-heart"></i> Social Responsibility</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul>
+            <li><a href="services.html#construction">Building Construction</a></li>
+            <li><a href="services.html#borehole">Borehole Drilling</a></li>
+            <li><a href="services.html#solar">Solar Installation</a></li>
+            <li><a href="services.html#design">Interior & Exterior Design</a></li>
+            <li><a href="services.html#architectural">Architectural Works</a></li>
+            <li><a href="services.html#logistics">Logistics & Supply</a></li>
+            <li><a href="services.html#maintenance">Maintenance Services</a></li>
+            <li><a href="services.html#property">Property Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer-heading">Contact Info</h3>
+          <p><i class="fas fa-phone-alt"></i> +211 926 295 744</p>
+          <p><i class="fas fa-phone-alt"></i> +211 912 616 971</p>
+          <p><i class="fas fa-envelope"></i> info@cdconstruction.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Munuki Suk Libya, next to Charter Bank, Juba, South Sudan</p>
+          <p><i class="fab fa-whatsapp"></i> +211 926 295 744</p>
+          <p><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 CD Logistics, Construction & General Trading Co. Ltd. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+  <a href="https://wa.me/211926295744" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
