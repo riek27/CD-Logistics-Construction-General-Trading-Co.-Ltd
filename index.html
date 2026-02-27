@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>CityBuild | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sticky Navbar -->
     <nav class="navbar">
         <div class="logo">CityBuild<span>CONSTRUCTION & ENGINEERING</span></div>
         <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
@@ -25,13 +24,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section (full screen) -->
-    <section id="home" class="hero" style="min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: url('https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover; background-attachment: fixed; isolation: isolate;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,25,39,0.85) 0%, rgba(10,25,39,0.6) 100%); z-index: -1;"></div>
-        <div class="hero-content" style="max-width: 1000px; color: var(--cream); animation: fadeUp 1.2s ease;">
-            <h1 style="color: var(--cream); font-weight: 800; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Building the Future with Strength & Precision</h1>
-            <p style="font-size: 1.4rem; margin: 1.5rem 0 3rem; opacity: 0.95; font-weight: 300; letter-spacing: 0.5px; color: #f0eae2;">Professional Construction & Engineering Services in Juba, South Sudan</p>
-            <div class="hero-buttons" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+    <section class="hero" style="background: url('https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover; background-attachment: scroll;">
+        <div class="hero-content">
+            <h1>Building the Future with Strength & Precision</h1>
+            <p>Professional Construction & Engineering Services in Juba, South Sudan</p>
+            <div class="hero-buttons">
                 <a href="services.html" class="btn">Our Services</a>
                 <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
@@ -39,95 +36,65 @@
     </section>
 
     <div class="container">
-        <!-- Intro paragraph -->
-        <div style="text-align: center; max-width: 950px; margin: 4rem auto 2rem; font-size: 1.25rem; color: #2c2c2c; font-weight: 300; line-height: 1.9;">
-            <p>CityBuild Construction and Engineering Co. Ltd stands as a beacon of excellence in Juba. We merge timeless craftsmanship with modern innovation, delivering structures that define luxury and durability.</p>
+        <div style="text-align: center; margin: 2.5rem 1rem;">
+            <p style="font-size: 1.1rem;">CityBuild Construction and Engineering Co. Ltd stands as a beacon of excellence in Juba. We merge timeless craftsmanship with modern innovation.</p>
         </div>
 
-        <!-- 3 Feature boxes -->
         <div class="features-grid">
-            <div class="feature-card"><i class="fas fa-gem"></i><h3>Quality Workmanship</h3><p>Meticulous attention to detail and premium materials ensure every project is a masterpiece.</p></div>
-            <div class="feature-card"><i class="fas fa-crown"></i><h3>Experienced Team</h3><p>Our architects and engineers bring world‑class expertise to the heart of South Sudan.</p></div>
-            <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Reliable & Durable Structures</h3><p>Built to withstand time and elements – safety and longevity are our signatures.</p></div>
+            <div class="feature-card"><i class="fas fa-gem"></i><h3>Quality Workmanship</h3><p>Meticulous attention to detail and premium materials.</p></div>
+            <div class="feature-card"><i class="fas fa-crown"></i><h3>Experienced Team</h3><p>World‑class architects and engineers.</p></div>
+            <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Reliable & Durable</h3><p>Built to withstand time and elements.</p></div>
         </div>
 
-        <!-- About summary with Learn More button -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin: 5rem 0;">
+        <!-- About summary -->
+        <div class="about-grid" style="margin: 3rem 0;">
             <div>
                 <h2>About CityBuild</h2>
-                <p style="font-size: 1.2rem; font-weight: 300; margin-bottom: 2rem;">With over a decade of experience, we have completed landmark projects across Juba. Our commitment to excellence and client satisfaction sets us apart.</p>
+                <p style="margin-bottom: 1.5rem;">With over a decade of experience, we have completed landmark projects across Juba. Our commitment to excellence sets us apart.</p>
                 <a href="about.html" class="btn">Learn More</a>
             </div>
-            <div class="about-image"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop" alt="About CityBuild" style="width:100%; border-radius:40px;"></div>
+            <div class="about-image"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop" alt="About CityBuild"></div>
         </div>
 
-        <!-- Why Choose Us section -->
-        <div style="margin: 5rem 0;">
+        <!-- Why Choose Us -->
+        <div style="margin: 3rem 0;">
             <h2 class="text-center">Why Choose Us</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-medal gold-text" style="font-size:3rem;"></i><h3>20+ Years</h3><p>Combined experience of our lead engineers.</p></div>
-                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-clock gold-text" style="font-size:3rem;"></i><h3>On Time</h3><p>Projects delivered within schedule.</p></div>
-                <div style="background: var(--cream); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--gold-light);"><i class="fas fa-handshake gold-text" style="font-size:3rem;"></i><h3>100% Client Satisfaction</h3><p>Long-term partnerships with repeat clients.</p></div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="background: var(--cream); padding: 2rem; border-radius: 20px;"><i class="fas fa-medal gold-text" style="font-size:2.5rem;"></i><h3>20+ Years</h3><p>Experience</p></div>
+                <div style="background: var(--cream); padding: 2rem; border-radius: 20px;"><i class="fas fa-clock gold-text" style="font-size:2.5rem;"></i><h3>On Time</h3><p>Delivery guaranteed</p></div>
+                <div style="background: var(--cream); padding: 2rem; border-radius: 20px;"><i class="fas fa-handshake gold-text" style="font-size:2.5rem;"></i><h3>100% Satisfaction</h3><p>Repeat clients</p></div>
             </div>
         </div>
 
-        <!-- CTA: Let's Build Something Great Together -->
+        <!-- CTA -->
         <div class="cta-common">
             <h2>Let's Build Something Great Together</h2>
             <a href="contact.html" class="btn">Get a Quote</a>
         </div>
 
-        <!-- Gallery section with button -->
-        <div style="margin: 5rem 0;">
+        <!-- Gallery preview -->
+        <div style="margin: 3rem 0;">
             <h2 class="text-center">Recent Projects</h2>
-            <div class="gallery-grid" style="margin: 3rem 0;">
+            <div class="gallery-grid" style="margin: 2rem 0;">
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1590673846749-e2b9fde5a7b2?q=80&w=1974&auto=format&fit=crop" alt="Project 1"></div>
-                <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop" alt="Project 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop" alt="Project 2"></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="Project 3"></div>
             </div>
-            <div class="text-center"><a href="gallery.html" class="btn">See Our All Gallery</a></div>
+            <div class="text-center"><a href="gallery.html" class="btn">See All Gallery</a></div>
         </div>
-
-        <!-- Another CTA (optional) but we already have one, so we'll keep it simple -->
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-grid">
-            <div>
-                <div class="footer-logo">CityBuild<span>Construction & Engineering Co. Ltd</span></div>
-                <p style="margin-top:1.5rem; color:#b9b3a8;">Excellence since 2026</p>
-            </div>
-            <div class="footer-links">
-                <h4 style="color:var(--gold);">Quick Links</h4>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-links">
-                <h4 style="color:var(--gold);">Contact</h4>
-                <p><i class="fas fa-phone"></i> +211 924 555 436</p>
-                <p><i class="fab fa-whatsapp"></i> +256 777 218 912</p>
-                <p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p>
-            </div>
-            <div>
-                <h4 style="color:var(--gold);">Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+            <div><div class="footer-logo">CityBuild<span>Construction & Engineering</span></div></div>
+            <div class="footer-links"><h4 style="color:var(--gold);">Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+            <div class="footer-links"><h4 style="color:var(--gold);">Contact</h4><p><i class="fas fa-phone"></i> +211 924 555 436</p><p><i class="fab fa-whatsapp"></i> +256 777 218 912</p><p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p></div>
+            <div><h4 style="color:var(--gold);">Follow</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
         </div>
         <div class="copyright">© 2026 CityBuild Construction and Engineering Co. Ltd. All Rights Reserved.</div>
     </footer>
 
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightbox-img" src="" alt=""></div>
-
     <script src="script.js"></script>
 </body>
 </html>
