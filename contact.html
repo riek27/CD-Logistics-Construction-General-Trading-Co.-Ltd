@@ -1,4 +1,4 @@
-<!-- ========== contact.html ========== -->
+<!-- ========== contact.html (fixed navbar) ========== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,26 +36,24 @@
                     <input type="email" placeholder="Email Address" required>
                     <input type="tel" placeholder="Phone Number">
                     <textarea placeholder="Tell us about your project..."></textarea>
-                    <button type="submit" class="btn" style="border: none;">Send Message</button>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
             <div class="details-card">
-                <h3 style="font-size: 2rem; color: var(--navy-deep);">CityBuild Engineering</h3>
-                <p><i class="fas fa-phone-alt"></i> +211 924 555 436 <br> <span style="margin-left: 3rem;">+211 981 554 994</span></p>
+                <h3 style="font-size: 1.8rem; color: var(--navy-deep);">CityBuild Engineering</h3>
+                <p><i class="fas fa-phone-alt"></i> +211 924 555 436 <br> +211 981 554 994</p>
                 <p><i class="fab fa-whatsapp"></i> +256 777 218 912</p>
                 <p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Gudele Street, Juba, South Sudan</p>
-                <p><i class="fas fa-clock"></i> Working hours: <strong>Always Open</strong> (24/7 support)</p>
+                <p><i class="fas fa-clock"></i> <strong>Always Open</strong> (24/7 support)</p>
             </div>
         </div>
 
-        <!-- Map -->
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.011912345678!2d31.579973!3d4.843055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17128b4b0b7b3b2f%3A0x8d3f3f8a9c1b9f0!2sJuba%2C%20South%20Sudan!5e0!3m2!1sen!2sus!4v1689780123456!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.011912345678!2d31.579973!3d4.843055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17128b4b0b7b3b2f%3A0x8d3f3f8a9c1b9f0!2sJuba%2C%20South%20Sudan!5e0!3m2!1sen!2sus!4v1689780123456!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <!-- CTA -->
-        <div class="cta-common" style="margin-top:5rem;">
+        <div class="cta-common">
             <h2>We'd love to hear from you</h2>
             <a href="#inquiryForm" class="btn">Send Inquiry</a>
         </div>
@@ -63,15 +61,44 @@
 
     <footer>
         <div class="footer-grid">
-            <div><div class="footer-logo">CityBuild<span>Construction & Engineering Co. Ltd</span></div><p style="margin-top:1.5rem; color:#b9b3a8;">Excellence since 2026</p></div>
-            <div class="footer-links"><h4 style="color:var(--gold);">Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
-            <div class="footer-links"><h4 style="color:var(--gold);">Contact</h4><p><i class="fas fa-phone"></i> +211 924 555 436</p><p><i class="fab fa-whatsapp"></i> +256 777 218 912</p><p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p></div>
-            <div><h4 style="color:var(--gold);">Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
+            <div>
+                <div class="footer-logo">CityBuild<span>Construction & Engineering</span></div>
+                <p style="margin-top:1rem; color:#b9b3a8;">Excellence since 2026</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color:var(--gold);">Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="color:var(--gold);">Contact</h4>
+                <p><i class="fas fa-phone"></i> +211 924 555 436</p>
+                <p><i class="fab fa-whatsapp"></i> +256 777 218 912</p>
+                <p><i class="fas fa-envelope"></i> info@citybuildcoltd.com</p>
+            </div>
+            <div>
+                <h4 style="color:var(--gold);">Follow</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="copyright">© 2026 CityBuild Construction and Engineering Co. Ltd. All Rights Reserved.</div>
+        <div class="copyright">
+            © 2026 CityBuild Construction and Engineering Co. Ltd. All Rights Reserved.
+        </div>
     </footer>
 
-    <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightbox-img" src="" alt=""></div>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
