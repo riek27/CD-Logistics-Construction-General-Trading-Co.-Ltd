@@ -1,112 +1,95 @@
-(function() {
-  // ===== TYPING ANIMATION (only on home) =====
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Typing animation
   const typedSpan = document.getElementById('typed-text');
-  if (typedSpan) {
+  if(typedSpan) {
     const phrases = [
-      "Construction Works.",
-      "Architectural Design.",
-      "Logistics & Supply Chain.",
-      "Renovation & Remodeling.",
-      "Interior Decoration.",
-      "Property Management."
+      "Residential Construction", "Commercial Construction",
+      "Architectural & Engineering Design", "Logistics & Supply Chain",
+      "Renovation & Remodeling", "Interior Decoration",
+      "Maintenance Services", "Property Management"
     ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let currentText = '';
-
-    function typeEffect() {
-      const fullText = phrases[phraseIndex];
-      if (isDeleting) {
-        currentText = fullText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        currentText = fullText.substring(0, charIndex + 1);
-        charIndex++;
+    let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+    
+    function loop() {
+      if(!typedSpan) return;
+      if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+          currentPhrase = phrases[i].substring(0, j);
+          typedSpan.textContent = currentPhrase;
+          j++;
+        }
+        if (isDeleting && j <= phrases[i].length) {
+          currentPhrase = phrases[i].substring(0, j-1);
+          typedSpan.textContent = currentPhrase;
+          j--;
+        }
+        if (j === phrases[i].length + 1) {
+          isDeleting = true;
+        }
+        if (isDeleting && j === 0) {
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) i = 0;
+        }
       }
-      typedSpan.textContent = currentText;
-
-      if (!isDeleting && charIndex === fullText.length) {
-        isDeleting = true;
-        setTimeout(typeEffect, 2000);
-        return;
-      }
-      if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(typeEffect, 300);
-        return;
-      }
-      const speed = isDeleting ? 60 : 100;
-      setTimeout(typeEffect, speed);
+      setTimeout(loop, 150);
     }
-    typeEffect();
+    loop();
   }
 
-  // ===== HEADER SCROLL EFFECT =====
-  const header = document.getElementById('header');
-  const scrollTopBtn = document.getElementById('scrollTop');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-
-    if (window.scrollY > 400) {
-      scrollTopBtn?.classList.add('show');
-    } else {
-      scrollTopBtn?.classList.remove('show');
-    }
-  });
-
-  // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#") return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // ===== SCROLL TO TOP =====
-  scrollTopBtn?.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // ===== MOBILE MENU TOGGLE =====
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-
-  if (hamburger && navMenu) {
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  if(hamburger) {
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
-      // animate hamburger
-      const spans = hamburger.querySelectorAll('span');
-      spans.forEach(span => span.classList.toggle('active'));
     });
   }
 
-  // ===== ACCORDION FOR SERVICES PAGE =====
-  const serviceHeaders = document.querySelectorAll('.service-detail-header');
-  serviceHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      content.classList.toggle('open');
-    });
-  });
-
-  // ===== PARALLAX EFFECT ON HERO =====
+  // Sticky navbar shrink
+  const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      const scrolled = window.scrollY;
-      hero.style.backgroundPositionY = scrolled * 0.3 + 'px';
+    if (window.scrollY > 100) {
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
     }
   });
-})();
+
+  // Services dropdown toggle (services.html)
+  const dropdownBtn = document.getElementById('serviceDropdownToggle');
+  const dropdownMenu = document.getElementById('serviceDropdownMenu');
+  if(dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdownMenu.classList.toggle('show');
+    });
+    // Close if clicked outside (optional)
+    document.addEventListener('click', (e) => {
+      if(!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  }
+
+  // Fade-in on scroll (Intersection Observer)
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+  // Smooth scrolling for internal links (optional)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
