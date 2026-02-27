@@ -541,7 +541,46 @@ footer {
     font-size: 0.85rem;
 }
 
-/* lightbox */
+//* Navbar - desktop adjustments */
+@media (min-width: 901px) {
+    .navbar {
+        padding: 0.8rem 2rem; /* give more horizontal space */
+    }
+    .logo {
+        font-size: 1.4rem;   /* slightly smaller to save space */
+        white-space: nowrap;
+    }
+    .logo span {
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.8rem;          /* reduce gap if needed */
+        background: transparent;
+        position: static;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+        border-left: none;
+    }
+    .nav-links a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+}
+
+/* For very narrow screens (below 400px) */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+    .logo span {
+        font-size: 0.45rem;
+    }
+}
+* lightbox */
 .lightbox {
     display: none;
     position: fixed;
