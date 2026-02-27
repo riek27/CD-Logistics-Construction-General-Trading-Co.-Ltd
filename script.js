@@ -1,122 +1,137 @@
-// script.js
+// script.js – all interactive enhancements
+
 document.addEventListener('DOMContentLoaded', function() {
-  // ========== TYPING ANIMATION ==========
-  const typedSpan = document.getElementById('typed-text');
-  if (typedSpan) {
-    const phrases = [
-      "Residential Construction",
-      "Commercial Construction",
-      "Architectural & Engineering Design",
-      "Logistics & Supply Chain",
-      "Renovation & Remodeling",
-      "Interior Decoration",
-      "Maintenance Services",
-      "Property Management"
-    ];
-    let i = 0, j = 0, currentPhrase = [];
+  // ---------- typing animation ----------
+  const typedTextSpan = document.getElementById('typing-text');
+  if (typedTextSpan) {
+    const textArray = ['Construction', 'Architecture', 'Logistics', 'Property Management'];
+    let i = 0;
+    let j = 0;
+    let currentText = '';
     let isDeleting = false;
 
-    function typeLoop() {
-      if (!typedSpan) return;
-      if (i < phrases.length) {
-        if (!isDeleting && j <= phrases[i].length) {
-          currentPhrase = phrases[i].substring(0, j);
-          typedSpan.textContent = currentPhrase;
+    function type() {
+      if (i < textArray.length) {
+        if (!isDeleting && j <= textArray[i].length) {
+          currentText = textArray[i].substring(0, j);
+          typedTextSpan.textContent = currentText;
           j++;
-        }
-        if (isDeleting && j <= phrases[i].length) {
-          currentPhrase = phrases[i].substring(0, j - 1);
-          typedSpan.textContent = currentPhrase;
+          setTimeout(type, 150);
+        } else if (isDeleting && j >= 0) {
+          currentText = textArray[i].substring(0, j);
+          typedTextSpan.textContent = currentText;
           j--;
-        }
-        if (j === phrases[i].length + 1) {
-          isDeleting = true;
-          setTimeout(typeLoop, 1500);
-          return;
-        }
-        if (isDeleting && j === 0) {
-          isDeleting = false;
-          i++;
-          if (i === phrases.length) i = 0;
+          setTimeout(type, 100);
+        } else {
+          if (!isDeleting) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+          } else {
+            isDeleting = false;
+            i = (i + 1) % textArray.length;
+            j = 0;
+            setTimeout(type, 400);
+          }
         }
       }
-      setTimeout(typeLoop, 120);
     }
-    typeLoop();
+    type();
   }
 
-  // ========== MOBILE HAMBURGER MENU ==========
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      // Animate bars
-      const bars = hamburger.querySelectorAll('.bar');
-      bars.forEach(bar => bar.classList.toggle('active'));
-    });
-  }
-
-  // ========== STICKY NAVBAR SHRINK ==========
+  // ---------- navbar background on scroll ----------
   const navbar = document.getElementById('navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        navbar.classList.add('shrink');
-      } else {
-        navbar.classList.remove('shrink');
-      }
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // ---------- mobile menu toggle ----------
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.getElementById('nav-menu');
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
     });
   }
 
-  // ========== SERVICES DROPDOWN TOGGLE ==========
-  const dropdownBtn = document.getElementById('serviceDropdownToggle');
-  const dropdownMenu = document.getElementById('serviceDropdownMenu');
-  if (dropdownBtn && dropdownMenu) {
-    dropdownBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      dropdownMenu.classList.toggle('show');
-    });
-    // Close if clicked outside
-    document.addEventListener('click', (e) => {
-      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove('show');
-      }
-    });
-  }
-
-  // ========== FADE-IN ON SCROLL (Intersection Observer) ==========
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-  faders.forEach(fader => appearOnScroll.observe(fader));
-
-  // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // ---------- mobile dropdown toggle (click on services parent) ----------
+  const dropbtn = document.querySelectorAll('.dropbtn');
+  dropbtn.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const parent = this.closest('.dropdown');
+        parent.classList.toggle('active');
+        const dropdownContent = parent.querySelector('.dropdown-content');
+        if (dropdownContent.style.display === 'block') {
+          dropdownContent.style.display = 'none';
+        } else {
+          dropdownContent.style.display = 'block';
+        }
       }
     });
   });
 
-  // ========== ACTIVE NAVIGATION HIGHLIGHT ==========
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-list a');
+  // ---------- scroll reveal (Intersection Observer) ----------
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(r => observer.observe(r));
+
+  // ---------- smooth scrolling for anchor links ----------
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // ---------- button ripple effect (premium touch) ----------
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.left = e.clientX - rect.left + 'px';
+      ripple.style.top = e.clientY - rect.top + 'px';
+      ripple.style.background = 'rgba(255,255,255,0.5)';
+      ripple.style.position = 'absolute';
+      ripple.style.borderRadius = '50%';
+      ripple.style.transform = 'scale(0)';
+      ripple.style.width = ripple.style.height = '10px';
+      ripple.style.animation = 'rippleAnim 0.5s linear';
+      btn.style.position = 'relative';
+      btn.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 500);
+    });
+  });
+  // add keyframe dynamically
+  const styleSheet = document.createElement("style");
+  styleSheet.textContent = `@keyframes rippleAnim { to { transform: scale(20); opacity: 0; } }`;
+  document.head.appendChild(styleSheet);
+
+  // ---------- close mobile menu after clicking a link ----------
+  const navLinks = document.querySelectorAll('.nav-menu a');
   navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
+    });
   });
 });
