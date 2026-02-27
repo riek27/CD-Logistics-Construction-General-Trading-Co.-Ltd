@@ -1,90 +1,148 @@
-<!-- ========== script.js (updated with overlay and touch) ========== -->
-<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>script.js</title></head>
-<body><pre style="font-family: monospace; white-space: pre-wrap;">
-// ----- script.js (mobile friendly) -----
+// ----- script.js - clean and functional -----
+
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+
+    // ========== MOBILE MENU TOGGLE ==========
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
+    const overlay = document.createElement('div'); // Create overlay dynamically
 
-    function closeMenu() {
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-    }
+    if (hamburger && navLinks) {
+        // Setup overlay
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
 
-    function openMenu() {
-        navLinks.classList.add('active');
-        overlay.classList.add('active');
-    }
-
-    if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            // Change icon (optional)
+            const icon = hamburger.querySelector('i');
             if (navLinks.classList.contains('active')) {
-                closeMenu();
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
             } else {
-                openMenu();
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking on overlay
+        overlay.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+
+        // Close menu when a nav link is clicked (for better UX)
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
         });
     }
 
-    // Close when clicking overlay
-    overlay.addEventListener('click', closeMenu);
-
-    // Close when a nav link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // Lightbox
-    const galleryItems = document.querySelectorAll('.gallery-item img');
+    // ========== GALLERY LIGHTBOX ==========
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    if (galleryItems.length && lightbox) {
-        galleryItems.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.classList.add('active');
-                lightboxImg.src = img.src;
+    if (lightbox && lightboxImg && closeBtn && galleryItems.length > 0) {
+        // Open lightbox on gallery item click
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                }
             });
         });
-    }
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
+        // Close lightbox functions
+        const closeLightbox = function() {
             lightbox.classList.remove('active');
+            lightboxImg.src = ''; // Clear src to stop loading if any
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close on overlay click
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
         });
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) lightbox.classList.remove('active');
+
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
         });
     }
 
-    // Smooth scroll (optional)
+    // ========== FORM SUBMISSION PREVENTION (optional) ==========
+    // Prevents actual submit for demo; remove or modify for backend integration
+    const inquiryForm = document.getElementById('inquiryForm');
+    if (inquiryForm) {
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry. We will contact you soon!');
+            // Optionally, you can add AJAX fetch here to send data to a server
+            inquiryForm.reset(); // Clear form after submission
+        });
+    }
+
+    // ========== HIGHLIGHT ACTIVE PAGE IN NAV (already set in HTML, but ensure) ==========
+    // No extra code needed because each page has 'active' class manually set in HTML.
+    // However, if you want to dynamically set based on URL (for single page app), uncomment below:
+    /*
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinksAll = document.querySelectorAll('.nav-links a');
+    navLinksAll.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    */
+
+    // ========== SMOOTH SCROLL FOR ANCHOR LINKS (if any) ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href === "#") return;
-            const target = document.querySelector(href);
-            if (target) {
+            if (href !== "#" && document.querySelector(href)) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
 
-    // Form alert
-    const form = document.getElementById('inquiryForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for contacting CityBuild. We will respond promptly.');
-            form.reset();
-        });
-    }
 });
-</pre></body></html>
