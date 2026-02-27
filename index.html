@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CD Logistics | Construction & Trading</title>
+  <title>CD Logistics | Construction & General Trading</title>
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,143 +12,174 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header" id="header">
-    <div class="logo">CD<span> Logistics</span></div>
-    <div class="hamburger">
-      <span></span><span></span><span></span>
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">CD <span>LOGISTICS</span></a>
+      </div>
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Building Excellence.<br>Delivering Trust.</h1>
-      <div class="typewriter">
-        <span id="typed-text"></span>
+  <main>
+    <!-- HERO SECTION (parallax) -->
+    <section class="hero parallax" style="background-image: url('https://images.unsplash.com/photo-1541976590-713941c6815d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Building Excellence.<br>Delivering Trust.</h1>
+        <div class="typewriter">
+          <span id="typed-text"></span><span class="cursor">|</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+          <a href="about.html" class="btn btn-outline">Learn More</a>
+        </div>
       </div>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn-primary">Start Your Project</a>
-        <a href="about.html" class="btn-secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Preview -->
-  <section class="container">
-    <div class="two-col">
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="About CD Logistics">
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview section fade-in">
+      <div class="container">
+        <div class="grid-2">
+          <div class="about-content">
+            <h2>Driven by Quality. Defined by Results.</h2>
+            <p>With decades of combined experience in construction, logistics, and general trading, CD Logistics stands as a beacon of reliability in South Sudan. We merge global standards with local expertise to deliver iconic structures and seamless supply chains.</p>
+            <a href="about.html" class="btn btn-secondary">Learn More →</a>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team discussion">
+          </div>
+        </div>
       </div>
-      <div class="about-text">
-        <h2 class="section-title">Driven by Quality. Defined by Results.</h2>
-        <p>CD Logistics, Construction & General Trading Co. Ltd is South Sudan’s premier integrated construction and logistics partner. With a relentless focus on quality management and safety-first operations, we deliver iconic structures and complex supply chain solutions.</p>
-        <a href="about.html" class="btn-primary" style="background: var(--navy); color: white;">Learn More</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Preview (4 cards) -->
-  <section class="bg-light">
+    <!-- SERVICES PREVIEW (4 CARDS) -->
+    <section class="services-preview section bg-light fade-in">
+      <div class="container">
+        <h2 class="section-title">Our Core Services</h2>
+        <div class="card-grid">
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residential">
+            <h3>Residential Construction</h3>
+            <p>Luxury homes and residential complexes with exquisite craftsmanship.</p>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial">
+            <h3>Commercial Construction</h3>
+            <p>High-rise offices, retail centers, and industrial facilities.</p>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Engineering">
+            <h3>Architectural Design</h3>
+            <p>Innovative designs blending aesthetics with functionality.</p>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Logistics">
+            <h3>Logistics & Supply Chain</h3>
+            <p>End-to-end freight, procurement, and material handling.</p>
+          </div>
+        </div>
+        <div class="center-btn">
+          <a href="services.html" class="btn btn-primary">See All Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US (DARK NAVY) -->
+    <section class="why-us section dark-bg fade-in">
+      <div class="container">
+        <h2 class="section-title text-gold">Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature"><i class="fas fa-check-circle"></i> Integrated Quality Management</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Safety First Operations</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Experienced Professional Team</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> On-Time Project Delivery</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Client-Centered Approach</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PREVIEW (3 PROJECTS) -->
+    <section class="projects-preview section fade-in">
+      <div class="container">
+        <h2 class="section-title">Recent Projects in Juba</h2>
+        <div class="card-grid">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project">
+            <h3>Charter Bank Tower</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Munuki, Juba</p>
+          </div>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1e3e0fadda?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project">
+            <h3>Suk Libya Commercial Hub</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Suk Libya, Juba</p>
+          </div>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project">
+            <h3>Nile Luxury Residences</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</p>
+          </div>
+        </div>
+        <div class="center-btn">
+          <a href="projects.html" class="btn btn-primary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section parallax" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+      <div class="cta-overlay"></div>
+      <div class="cta-content">
+        <h2>Call Us and Start Your Project Today.</h2>
+        <a href="contact.html" class="btn btn-gold">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (shared) -->
+  <footer class="footer">
     <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Residential Construction">
-          <h3>Residential Construction</h3>
-          <p>Luxury homes & apartments built to last.</p>
-        </div>
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Commercial Construction">
-          <h3>Commercial Construction</h3>
-          <p>Offices, malls, and industrial buildings.</p>
-        </div>
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Logistics">
-          <h3>Logistics & Supply Chain</h3>
-          <p>Efficient procurement and freight.</p>
-        </div>
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Renovation">
-          <h3>Renovation & Remodeling</h3>
-          <p>Transform existing spaces.</p>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top: 40px;">
-        <a href="services.html" class="btn-primary">See All Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="bg-navy">
-    <div class="container">
-      <h2 class="section-title">Why Choose Us</h2>
-      <div class="bullets-grid">
-        <div class="bullet-item"><i class="fas fa-check-circle"></i> <span>Integrated Quality Management</span></div>
-        <div class="bullet-item"><i class="fas fa-clock"></i> <span>On-Time Project Delivery</span></div>
-        <div class="bullet-item"><i class="fas fa-shield-alt"></i> <span>Safety-First Operations</span></div>
-        <div class="bullet-item"><i class="fas fa-users"></i> <span>Professional Team</span></div>
-        <div class="bullet-item"><i class="fas fa-handshake"></i> <span>Trusted by Businesses</span></div>
-        <div class="bullet-item"><i class="fas fa-trophy"></i> <span>Excellence in Every Project</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Preview (3 projects) -->
-  <section class="container">
-    <h2 class="section-title">Recent Projects</h2>
-    <div class="projects-grid">
-      <div class="project-item">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Project">
-        <div class="project-overlay">
-          <h4>Nile Tower</h4>
-          <p>Juba, Commercial</p>
-          <a href="projects.html" class="project-link">View Project →</a>
-        </div>
-      </div>
-      <div class="project-item">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1d3fa86c58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Project">
-        <div class="project-overlay">
-          <h4>Royal Residence</h4>
-          <p>Juba, Residential</p>
-          <a href="projects.html" class="project-link">View Project →</a>
-        </div>
-      </div>
-      <div class="project-item">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Project">
-        <div class="project-overlay">
-          <h4>Logistics Hub</h4>
-          <p>Nimule, Logistics</p>
-          <a href="projects.html" class="project-link">View Project →</a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top: 40px;">
-      <a href="projects.html" class="btn-primary">View All Projects</a>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta">
-    <div class="container">
-      <h2>Let’s Build Something Exceptional Together.</h2>
-      <a href="contact.html" class="btn-primary" style="background: var(--gold); color: var(--navy);">Get Started</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-about">
-          <div class="footer-logo">CD<span> Logistics</span></div>
-          <p>Proudly South Sudanese – Quality & Professional. Multidisciplinary services for sustainable development.</p>
+          <h3>CD Logistics, Construction & General Trading Co. Ltd</h3>
+          <p>Munuki, Suk Libya, Next to Charter Bank, Juba, South Sudan</p>
+          <p><i class="fas fa-phone-alt"></i> +211 912 345 678 <br> <i class="fas fa-envelope"></i> info@cdlogisticsconstruction.com</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li>Residential Construction</li>
+            <li>Commercial Construction</li>
+            <li>Architectural Design</li>
+            <li>Logistics & Supply Chain</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -155,47 +187,12 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="footer-links">
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-            <li><a href="#"><i class="fas fa-heart"></i> Social Responsibility</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-services">
-          <h3 class="footer-heading">Our Services</h3>
-          <ul>
-            <li><a href="services.html#construction">Building Construction</a></li>
-            <li><a href="services.html#design">Interior & Exterior Design</a></li>
-            <li><a href="services.html#architectural">Architectural Works</a></li>
-            <li><a href="services.html#logistics">Logistics & Supply</a></li>
-            <li><a href="services.html#maintenance">Maintenance Services</a></li>
-            <li><a href="services.html#property">Property Management</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3 class="footer-heading">Contact Info</h3>
-          <p><i class="fas fa-phone-alt"></i> +211 926 295 744</p>
-          <p><i class="fas fa-phone-alt"></i> +211 912 616 971</p>
-          <p><i class="fas fa-envelope"></i> info@cdconstruction.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> Munuki Suk Libya, next to Charter Bank, Juba, South Sudan</p>
-          <p><i class="fab fa-whatsapp"></i> +211 926 295 744</p>
-          <p><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</p>
-        </div>
       </div>
       <div class="footer-bottom">
-        © 2026 CD Logistics, Construction & General Trading Co. Ltd. All Rights Reserved.
+        <p>© 2026 CD Logistics, Construction & General Trading Co. Ltd. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
-
-  <a href="https://wa.me/211926295744" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <div class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></div>
 
   <script src="script.js"></script>
 </body>
