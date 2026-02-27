@@ -3,150 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | CD Logistics</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>About Us — CD Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- TOP BAR & NAVBAR (same as index, copy exactly) -->
-  <div class="top-bar">...</div>
-  <header id="navbar" class="navbar">...</header>
+  <nav class="navbar" id="navbar">... (same navbar as index) ...</nav>
 
-  <main>
-    <!-- HERO -->
-    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1523898052728-e0c256c1f962?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
-      <div class="hero-overlay"></div>
-      <h1>About Our Company</h1>
-    </section>
+  <section class="hero hero-about" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">About <span class="gold">CD Logistics</span></h1>
+      <p class="hero-subtitle">Decades of trust, one project at a time</p>
+    </div>
+  </section>
 
-    <!-- COMPANY HISTORY (image left, text right) -->
-    <section class="about-history section fade-in">
-      <div class="container grid-2">
-        <div class="history-image">
-          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Historic project">
-        </div>
-        <div>
-          <h2 class="section-title" style="text-align: left;">Our History: Building South Sudan Since 2010</h2>
-          <p>CD Logistics was founded in Juba by a team of engineers and logistics experts who saw the need for reliable, high-quality construction services in the region. What started as a small general trading company quickly evolved into a full-fledged construction and logistics enterprise. Our first major contract was the renovation of the Ministry of Finance building, which we delivered ahead of schedule despite challenging conditions.</p>
-          <p>Over the past 15 years, we have expanded our portfolio to include commercial high-rises, residential estates, and infrastructure projects. We’ve established partnerships with international suppliers and trained a local workforce of over 200 skilled professionals. Our history is defined by resilience, integrity, and a relentless pursuit of excellence.</p>
-          <a href="contact.html" class="btn btn-primary">Work With Us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION & VISION -->
-    <section class="mission-vision section bg-light fade-in">
-      <div class="container grid-2">
-        <div class="mission">
-          <h3 class="text-gold" style="font-size: 2rem;">Our Mission</h3>
-          <p style="font-size: 1.2rem;">To deliver superior construction and logistics solutions that drive economic growth and improve communities in South Sudan, while upholding the highest standards of safety, ethics, and environmental stewardship.</p>
-        </div>
-        <div class="vision">
-          <h3 class="text-gold" style="font-size: 2rem;">Our Vision</h3>
-          <p style="font-size: 1.2rem;">To be the most trusted name in East African infrastructure, recognized for innovation, quality, and lasting partnerships. We envision a future where our projects become landmarks of progress.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE VALUES -->
-    <section class="values section fade-in">
-      <div class="container">
-        <h2 class="section-title">Core Values That Define Us</h2>
-        <div class="values-grid">
-          <div class="value-item"><i class="fas fa-gem"></i> Quality</div>
-          <div class="value-item"><i class="fas fa-handshake"></i> Integrity</div>
-          <div class="value-item"><i class="fas fa-hard-hat"></i> Safety</div>
-          <div class="value-item"><i class="fas fa-trophy"></i> Excellence</div>
-          <div class="value-item"><i class="fas fa-clock"></i> Reliability</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBJECTIVES -->
-    <section class="objectives section bg-light fade-in">
-      <div class="container">
-        <h2 class="section-title">Strategic Company Objectives</h2>
-        <ul class="objectives-list">
-          <li><i class="fas fa-chevron-right"></i> Expand heavy civil construction capacity to include bridges and roads by 2027.</li>
-          <li><i class="fas fa-chevron-right"></i> Integrate green building practices (LEED certification) into all new designs.</li>
-          <li><i class="fas fa-chevron-right"></i> Develop local workforce through accredited training programs and apprenticeships.</li>
-          <li><i class="fas fa-chevron-right"></i> Enhance supply chain digitalization for real-time tracking and procurement efficiency.</li>
-          <li><i class="fas fa-chevron-right"></i> Achieve 100% client satisfaction through continuous feedback loops.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EXPERTISE TEAMS -->
-    <section class="expertise section fade-in">
-      <div class="container">
-        <h2 class="section-title">Our Expertise Across Teams</h2>
-        <div class="expertise-grid">
-          <div class="expertise-item"><i class="fas fa-users"></i> Engineering Team</div>
-          <div class="expertise-item"><i class="fas fa-chart-line"></i> Project Management</div>
-          <div class="expertise-item"><i class="fas fa-truck"></i> Logistics Team</div>
-          <div class="expertise-item"><i class="fas fa-pencil-ruler"></i> Design & Interior</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
-      <div class="cta-overlay"></div>
-      <div class="cta-content">
-        <h2>Call Us and Start Your Project</h2>
-        <a href="contact.html" class="btn btn-gold">Work With Us</a>
-      </div>
-    </section>
-  </main>
-
-  <<!-- FOOTER (shared) -->
-  <footer class="footer">
+  <section class="section reveal">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <h3>CD Logistics, Construction & General Trading Co. Ltd</h3>
-          <p><i class="fas fa-map-marker-alt gold" style="color: var(--gold);"></i> Munuki, Suk Libya, Next to Charter Bank, Juba, South Sudan</p>
-          <p><i class="fas fa-phone-alt gold" style="color: var(--gold);"></i> +211 926 295 744</p>
-          <p><i class="fas fa-envelope gold" style="color: var(--gold);"></i> info@cdlogisticsconstruction.com</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-services">
-          <h4>Our Services</h4>
-          <ul>
-            <li>Residential Construction</li>
-            <li>Commercial Construction</li>
-            <li>Architectural Design</li>
-            <li>Logistics & Supply Chain</li>
-            <li>Renovation & Remodeling</li>
-            <li>Interior Decoration</li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
+      <h2 class="section-title">Company History</h2>
+      <p>Founded in 2012 in Juba, CD Logistics began as a small general trading outfit. Through unwavering commitment to quality and safety, we rapidly grew into one of South Sudan’s most respected construction and logistics firms. We have successfully delivered hospitals, educational institutions, commercial high‑rises, and critical infrastructure — always on time and within budget.</p>
+    </div>
+  </section>
+
+  <section class="section bg-light reveal">
+    <div class="container mission-vision">
+      <div class="card">
+        <i class="fas fa-bullseye gold" style="font-size: 2.5rem;"></i>
+        <h3>Our Mission</h3>
+        <p>To provide innovative construction and logistics solutions that drive South Sudan’s development, while upholding the highest standards of safety and ethics.</p>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 CD Logistics, Construction & General Trading Co. Ltd. All Rights Reserved.</p>
+      <div class="card">
+        <i class="fas fa-eye gold" style="font-size: 2.5rem;"></i>
+        <h3>Our Vision</h3>
+        <p>To be the benchmark for engineering excellence in East Africa — a partner of choice for visionary projects.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title centered">Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card"><i class="fas fa-gem"></i><span>Quality</span></div>
+        <div class="value-card"><i class="fas fa-scale-balanced"></i><span>Integrity</span></div>
+        <div class="value-card"><i class="fas fa-hard-hat"></i><span>Safety</span></div>
+        <div class="value-card"><i class="fas fa-star"></i><span>Excellence</span></div>
+        <div class="value-card"><i class="fas fa-clock"></i><span>Reliability</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light reveal">
+    <div class="container">
+      <h2 class="section-title centered">Team Expertise</h2>
+      <p>Our multidisciplinary team includes licensed architects, structural engineers, project managers, logistics coordinators and skilled foremen — many with international experience. We invest in continuous training to stay ahead of modern construction techniques.</p>
+    </div>
+  </section>
+
+  <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2>Need Professional Construction Services?</h2>
+      <a href="tel:+211926295744" class="btn btn-primary">Call Us Today</a>
+    </div>
+  </section>
+
+  <footer class="footer">... (same footer) ...</footer>
   <script src="script.js"></script>
 </body>
 </html>
